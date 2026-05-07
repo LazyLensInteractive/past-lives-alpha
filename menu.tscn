@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d02cwu8e6fqcy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vsb4k"]
+size = Vector3(100, 0.3, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lti8b"]
+size = Vector3(100, 0.3, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.18571076, 0.19136897, 0.1998559, 1)
+sky_curve = 0.13058257
+sky_energy_multiplier = 0.0
+sky_cover_modulate = Color(0.28118682, 0.28118688, 0.28118682, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.15479648, 0.15870479, 0.16653046, 1)
+ground_curve = 0.038637504
+ground_energy_multiplier = 0.0
+
+[sub_resource type="Sky" id="Sky_mae5d"]
+sky_material = SubResource("ProceduralSkyMaterial_ouk20")
+
+[sub_resource type="Environment" id="Environment_4hy44"]
+background_mode = 2
+sky = SubResource("Sky_mae5d")
+
+[node name="menu" type="Node3D" unique_id=2043559759]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1513259877]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1126013134]
+mesh = SubResource("BoxMesh_vsb4k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=834137629]
+shape = SubResource("BoxShape3D_lti8b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=226464839]
+environment = SubResource("Environment_4hy44")

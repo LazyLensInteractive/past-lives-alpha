@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bv73pub6pbu8k"]
+
+[ext_resource type="PackedScene" uid="uid://jhoq75su2hqd" path="res://house.fbx" id="1_hfkix"]
+
+[node name="Node3D" type="Node3D" unique_id=2012536261]
+
+[node name="house" parent="." unique_id=1479702724 instance=ExtResource("1_hfkix")]

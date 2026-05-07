@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://8nugkc7dt21f"]
+
+[ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="1_4flbx"]
+
+[node name="Player" type="Node3D" unique_id=955110433]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1173332840]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1575553040]
+
+[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" unique_id=1611957559]
+script = ExtResource("1_4flbx")
+metadata/_custom_type_script = "uid://ck4yn3hxuobj7"
+
+[node name="Text hold 1" type="Label3D" parent="." unique_id=719316931]
+billboard = 2
