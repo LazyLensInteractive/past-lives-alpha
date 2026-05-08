@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dqkwe6xa6mbsy"]
+
+[ext_resource type="Script" uid="uid://cxikvrlak1p3e" path="res://text_system.gd" id="1_prn7k"]
+
+[node name="Text System" type="Node3D" unique_id=1256365715]
+script = ExtResource("1_prn7k")

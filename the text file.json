@@ -1,0 +1,22 @@
+{
+  "test": {
+    "speaker": "System",
+    "lines": [
+      "one",
+      "two",
+      "three",
+      "you ever wonder why people sometimes say things they don't mean? it really bugs me."
+    ],
+    "speed_min": 0.4,
+    "speed _max":  0.8,
+    "color": "#ff0000",
+    "shake": true
+  },
+  "test2": {
+    "speaker": "???",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. I've been waiting for you.",
+    "type_speed": 0.05,
+    "color": "#ffffff",
+    "shake": false
+  }
+}

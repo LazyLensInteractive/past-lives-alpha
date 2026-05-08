@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://hbmcdi27or4q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hun61"]
+size = Vector3(0.995, 2.205, 0.155)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ba8gm"]
+size = Vector3(0.995, 2.205, 0.155)
+
+[node name="door" type="Node3D" unique_id=1968695199]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2014535752]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1478294231]
+mesh = SubResource("BoxMesh_hun61")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1315196246]
+shape = SubResource("BoxShape3D_ba8gm")
+
+[node name="TextLocation" type="Marker3D" parent="." unique_id=1789699347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27575767, 0.30198205, 0)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="TextLocation" unique_id=551730932]

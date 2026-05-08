@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://d02cwu8e6fqcy"]
 
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://player.tscn" id="1_lti8b"]
+[ext_resource type="PackedScene" uid="uid://bpyr3ve6dbu3e" path="res://text.tscn" id="2_mae5d"]
+[ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://text.gd" id="3_4hy44"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_vsb4k"]
 size = Vector3(100, 0.3, 100)
 
@@ -36,3 +40,14 @@ shape = SubResource("BoxShape3D_lti8b")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=226464839]
 environment = SubResource("Environment_4hy44")
+
+[node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.596717, 19.4482, 10.672138)
+
+[node name="Text" parent="." unique_id=495269214 node_paths=PackedStringArray("text_location") instance=ExtResource("2_mae5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8203523, 2.5354962, 7.936964)
+script = ExtResource("3_4hy44")
+text_location = NodePath("../Menu Text location")
+
+[node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)

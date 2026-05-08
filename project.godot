@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Past-lives-alpha"
+run/main_scene="uid://d02cwu8e6fqcy"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -18,6 +19,7 @@ config/icon="res://icon.svg"
 
 XRToolsUserSettings="*uid://bqgb8i74tm0t"
 XRToolsRumbleManager="*uid://by853dk86g1qw"
+TextSystem="*uid://cxikvrlak1p3e"
 
 [editor_plugins]
 
