@@ -2,14 +2,45 @@
 
 [ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cuk88kog51soy" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://chcuj3jysipk8" path="res://addons/godot-xr-tools/functions/movement_jog.tscn" id="3_1jxqw"]
+[ext_resource type="Script" uid="uid://b18kkstg643yw" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="4_sweqy"]
+[ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="5_2hs0m"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="6_dw050"]
 
 [node name="Player" type="Node3D" unique_id=955110433]
 script = ExtResource("1_onrkg")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1173332840]
+current = true
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1575553040]
+current = true
 
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" unique_id=1611957559]
 script = ExtResource("1_4flbx")
 metadata/_custom_type_script = "uid://ck4yn3hxuobj7"
+
+[node name="MovementJog" parent="XROrigin3D/XRToolsPlayerBody" unique_id=112937006 instance=ExtResource("3_1jxqw")]
+
+[node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=767302225]
+tracker = &"left_hand"
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/XRController3D" unique_id=692198607]
+script = ExtResource("3_i3pqv")
+metadata/_custom_type_script = "uid://b18kkstg643yw"
+
+[node name="LeftHand" parent="XROrigin3D/XRController3D" unique_id=1826707353 instance=ExtResource("4_sweqy")]
+
+[node name="MovementDirect" parent="XROrigin3D/XRController3D" unique_id=1304937860 instance=ExtResource("6_dw050")]
+
+[node name="XRController3D2" type="XRController3D" parent="XROrigin3D" unique_id=425446826]
+tracker = &"right_hand"
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/XRController3D2" unique_id=1807508739]
+script = ExtResource("3_i3pqv")
+metadata/_custom_type_script = "uid://b18kkstg643yw"
+
+[node name="RightHand" parent="XROrigin3D/XRController3D2" unique_id=839002924 instance=ExtResource("5_2hs0m")]
+
+[node name="MovementDirect" parent="XROrigin3D/XRController3D2" unique_id=1375829759 instance=ExtResource("6_dw050")]

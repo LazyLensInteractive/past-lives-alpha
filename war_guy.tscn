@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://xqyoluqxre4e"]
+
+[ext_resource type="Script" uid="uid://dr3ubc0vavxmh" path="res://target.gd" id="1_ijn8t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gjg8o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ijn8t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gjg8o"]
+size = Vector3(0.57, 0.195, 0.315)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijn8t"]
+size = Vector3(0.57, 0.195, 0.315)
+
+[sub_resource type="Animation" id="Animation_yc1o8"]
+resource_name = "Gun_walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ycrtf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_trypp"]
+_data = {
+&"Gun_walk": SubResource("Animation_yc1o8"),
+&"RESET": SubResource("Animation_ycrtf")
+}
+
+[node name="War_guy" type="Node3D" unique_id=1047141349]
+
+[node name="Guy_body" type="AnimatableBody3D" parent="." unique_id=656223965]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Guy_body" unique_id=2090213377]
+mesh = SubResource("CapsuleMesh_gjg8o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Guy_body" unique_id=564961739]
+shape = SubResource("CapsuleShape3D_ijn8t")
+
+[node name="GunLocation" type="RemoteTransform3D" parent="Guy_body" unique_id=211982946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36225832, 0.05146703, -0.8099046)
+
+[node name="Gun" type="RigidBody3D" parent="." unique_id=1703610369]
+axis_lock_linear_y = true
+script = ExtResource("1_ijn8t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Gun" unique_id=1659047280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30483675, 0, -0.9489486)
+mesh = SubResource("BoxMesh_gjg8o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gun" unique_id=167040167]
+transform = Transform3D(0.13343266, 0, 0.9910579, 0, 1, 0, -0.9910579, 0, 0.13343266, 0.30483675, 0, -0.9489486)
+shape = SubResource("BoxShape3D_ijn8t")
+
+[node name="RayCast3D" type="RayCast3D" parent="Gun" unique_id=868129992]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.30870062, 0, -1.1413679)
+target_position = Vector3(0, -1001.245, 0)
+collision_mask = 524288
+debug_shape_thickness = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1764802393]
+libraries/ = SubResource("AnimationLibrary_trypp")

@@ -1,17 +1,68 @@
 [gd_scene format=3 uid="uid://dcxw5mq8qxd3q"]
 
+[ext_resource type="Script" uid="uid://yrnnx7em0885" path="res://startxr.gd" id="1_3302r"]
+[ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://war_guy.tscn" id="1_widmx"]
+[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://shooting_target.tscn" id="2_wftij"]
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://player.tscn" id="3_3302r"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_jjuv8"]
+[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://gun2.tscn" id="6_qun86"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_g8hju"]
 size = Vector3(135, 0.3, 135)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ekker"]
 size = Vector3(135, 0.3, 135)
 
+[sub_resource type="BoxMesh" id="BoxMesh_qun86"]
+size = Vector3(1.645, 2.91, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hf6xi"]
+size = Vector3(1.645, 2.91, 1)
+
 [node name="Random junk" type="Node3D" unique_id=440313742]
+script = ExtResource("1_3302r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=470526976]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=630171344]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=783541202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083601, 0.0095226765, 0.9931216)
 mesh = SubResource("BoxMesh_g8hju")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=813638260]
 shape = SubResource("BoxShape3D_ekker")
+
+[node name="War_guy" parent="." unique_id=1047141349 instance=ExtResource("1_widmx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8261373, 1.1500001, 3.8626904)
+
+[node name="shooting target" parent="." unique_id=1422117074 instance=ExtResource("2_wftij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1079292, 2.744514, -5.755076)
+
+[node name="shooting target2" parent="." unique_id=2105063439 instance=ExtResource("2_wftij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.292843, 0.65779823, -20.986755)
+
+[node name="shooting target3" parent="." unique_id=1426778745 instance=ExtResource("2_wftij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.153898, 0.65779823, -8.645625)
+
+[node name="shooting target4" parent="." unique_id=1328068505 instance=ExtResource("2_wftij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.212145, 0.65779823, -12.852147)
+
+[node name="Player" parent="." unique_id=955110433 instance=ExtResource("3_3302r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.168741, 2.1228752, 3.9138632)
+
+[node name="StartXR" parent="." unique_id=1492552891 instance=ExtResource("4_jjuv8")]
+
+[node name="PickableObject" parent="." unique_id=1612233214 instance=ExtResource("6_qun86")]
+transform = Transform3D(0.015533256, 0.73602766, 0.67677325, 0.9997774, -0.021099476, 0, 0.014279561, 0.67662257, -0.7361916, 8.027016, 1.7687678, 2.9816215)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=186368156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6430326, 0, 3.0652554)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=506944106]
+mesh = SubResource("BoxMesh_qun86")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1664010113]
+shape = SubResource("BoxShape3D_hf6xi")

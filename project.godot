@@ -25,6 +25,10 @@ TextSystem="*uid://cxikvrlak1p3e"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
+[global_group]
+
+Shootable="This variant npcs can target as well"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -36,4 +40,5 @@ renderer/rendering_method="mobile"
 
 [xr]
 
+openxr/enabled=true
 shaders/enabled=true
