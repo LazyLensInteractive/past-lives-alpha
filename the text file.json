@@ -2,9 +2,9 @@
   "test": {
     "speaker": "System",
     "lines": [
-      "one",
-      "two",
-      "three",
+      "You were out cold for a bit there... lets get back to it",
+      "Grab the gun, I left it over to your right",
+      "Just dont let them reach us that's it",
       "you ever wonder why people sometimes say things they don't mean? It really bugs me."
     ],
     "speed_min": 0.4,
@@ -14,7 +14,10 @@
   },
   "test2": {
     "speaker": "???",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. I've been waiting for you.",
+    "lines": [
+      "Well what do we have here...",
+      "You are not meant to be here....",
+    ],
     "type_speed": 0.05,
     "color": "#ffffff",
     "shake": false

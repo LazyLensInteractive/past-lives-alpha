@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://0jalf3ryd6q7"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1titk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_04nx5"]
+
+[sub_resource type="Animation" id="Animation_1titk"]
+resource_name = "Shoot player"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_04nx5"]
+_data = {
+&"Shoot player": SubResource("Animation_1titk")
+}
+
+[node name="the unknown" type="Node3D" unique_id=1976924433]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=2117087634]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=407665738]
+mesh = SubResource("CapsuleMesh_1titk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=294777877]
+shape = SubResource("CapsuleShape3D_04nx5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685565040]
+libraries/ = SubResource("AnimationLibrary_04nx5")
