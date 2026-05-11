@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dhebgb6ou1hrs" path="res://player gun.gd" id="6_72rl8"]
 [ext_resource type="Script" uid="uid://dx3swqg2owe4p" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="7_c0m3e"]
 [ext_resource type="Script" uid="uid://cloxfr8r3b00u" path="res://addons/godot-xr-tools/interactables/interactable_slider.gd" id="8_0krtc"]
+[ext_resource type="AudioStream" uid="uid://dyf2dcodyef33" path="res://audio/freesound_community-realistic-shot-81087.mp3" id="9_j28cv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qdv7"]
 size = Vector3(0.09060669, 0.27041626, 0.26904297)
@@ -100,10 +101,11 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002029419, 0.14881897, -0.07397461)
 shape = SubResource("BoxShape3D_1qdv7")
 
-[node name="RE-45_001" type="MeshInstance3D" parent="." index="1" unique_id=1422042637]
+[node name="RE-45_001" type="MeshInstance3D" parent="." index="1" unique_id=1422042637 node_paths=PackedStringArray("audio_stream_player_3d")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_deqqd")
 script = ExtResource("6_72rl8")
+audio_stream_player_3d = NodePath("../AudioStreamPlayer3D")
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="." index="2" unique_id=1643359246]
 transform = Transform3D(-0.9968953, -0.032437976, 0.0717453, 0.06737709, 0.12005295, 0.99047846, -0.040742382, 0.9922375, -0.117494754, -0.020301402, 0.13533728, -0.06495379)
@@ -145,5 +147,11 @@ visible = false
 light_energy = 16.0
 spot_range = 0.5839107
 spot_angle = 57.730164
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="8" unique_id=178150624]
+stream = ExtResource("9_j28cv")
+volume_db = -38.879
+
+[node name="shoot delay" type="Timer" parent="." index="9" unique_id=1782460096]
 
 [connection signal="action_pressed" from="." to="RE-45_001" method="_on_pickable_object_action_pressed"]

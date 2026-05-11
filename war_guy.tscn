@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dr3ubc0vavxmh" path="res://target.gd" id="1_ijn8t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gjg8o"]
+height = 3.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ijn8t"]
 
@@ -53,6 +54,7 @@ _data = {
 [node name="Guy_body" type="AnimatableBody3D" parent="." unique_id=656223965]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Guy_body" unique_id=2090213377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6339607, 0)
 mesh = SubResource("CapsuleMesh_gjg8o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Guy_body" unique_id=564961739]

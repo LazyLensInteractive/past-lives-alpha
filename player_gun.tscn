@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b5l6cgxjk0ht5" path="res://textures/RE-45 Autopistol_Normal_DirectX.png" id="4_bsf1b"]
 [ext_resource type="Script" uid="uid://cloxfr8r3b00u" path="res://addons/godot-xr-tools/interactables/interactable_slider.gd" id="4_wi4uq"]
 [ext_resource type="Texture2D" uid="uid://c56urxrpvgolj" path="res://textures/RE-45 Autopistol_Roughness.png" id="5_ioj3q"]
+[ext_resource type="AudioStream" uid="uid://dyf2dcodyef33" path="res://audio/freesound_community-realistic-shot-81087.mp3" id="9_ottym"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4y34"]
 resource_name = "RE-45 Autopistol"
@@ -96,3 +97,6 @@ transform = Transform3D(-0.9405937, -0.1023534, 0.32373953, -0.24303403, 0.86879
 script = ExtResource("3_xxsfv")
 hand = 1
 metadata/_custom_type_script = "uid://dx3swqg2owe4p"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=927105892]
+stream = ExtResource("9_ottym")

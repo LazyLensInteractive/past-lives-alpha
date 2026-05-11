@@ -13,7 +13,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_focus_next"):
-		TextSystem.text_change("test")
-	if Input.is_action_just_pressed("ui_accept"):
-		TextSystem.step_text()
+	pass 
+	
+	#if Input.is_action_just_pressed("ui_focus_next"):
+		#TextSystem.text_change("test")
+	#if Input.is_action_just_pressed("ui_accept"):
+		#TextSystem.step_text()
