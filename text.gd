@@ -1,19 +1,16 @@
 extends Node3D
-@export var text_location: Marker3D
+@export var dialogue_key: String = "war_guy" 
+@export var auto_start: bool = true
+@onready var label_3d: Label3D = $Label3D 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if auto_start:
+		start_talking()
+func start_talking() -> void:
 	TextSystem.current_text = self
-	TextSystem.text_location = text_location
-	TextSystem.text_change("war_guy")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
+	TextSystem.text_change(dialogue_key)
 func _on_auto_text_timeout() -> void:
-	if TextSystem.is_typing == true:
+	if TextSystem.is_typing:
 		return
-	TextSystem.step_text()
+	if TextSystem.current_text == self:
+		TextSystem.step_text()

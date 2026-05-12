@@ -153,5 +153,11 @@ stream = ExtResource("9_j28cv")
 volume_db = -38.879
 
 [node name="shoot delay" type="Timer" parent="." index="9" unique_id=1782460096]
+one_shot = true
+
+[node name="death" type="Timer" parent="." index="10" unique_id=426968278]
+wait_time = 4.0
+one_shot = true
 
 [connection signal="action_pressed" from="." to="RE-45_001" method="_on_pickable_object_action_pressed"]
+[connection signal="timeout" from="death" to="RE-45_001" method="_on_death_timeout"]

@@ -5,16 +5,14 @@ var text_data = {}
 var current_line = 0
 var current_option = ""
 var is_typing = false
-var typing_id = 0
-
-
-@export_file("*.json") var current_loaded_text: String = ""
-func text_load(Path: String):
-	Path = FileAccess.get_file_as_string(Path)
-	if Path == null:
+@export_file("*.json") var current_loaded_text
+func text_load():
+	pass
+func _ready() -> void:
+	var text_file_load = FileAccess.get_file_as_string(current_loaded_text)
+	if text_file_load == null:
 		return
-	text_data = JSON.parse_string(Path)
-	print("Keys found in JSON: ", text_data.keys())
+	text_data = JSON.parse_string(text_file_load)
 	if text_data == null:
 		print("fucked up lil bro")
 	else:
@@ -29,20 +27,15 @@ func text_change(option: String):
 	current_option = option
 	current_line = 0
 	text_display()
-	
-func _ready() -> void:
-	pass
-	
+	#current_text.global_position = text_location.global_position
+	#current_text.get_node("Label3D").text = text_data
 func text_display():
-	typing_id += 1
-	var local_id = typing_id
 	is_typing = true
 	var sentance = text_data[current_option]["lines"][current_line]
 	var label = current_text.get_node("Label3D")
 	label.text = ""
+	print(sentance)
 	for letter in sentance:
-		if local_id != typing_id: 
-			return
 		label.text += letter
 		var typing_variation = randf_range(0.01, 0.2)
 		await get_tree().create_timer(typing_variation).timeout

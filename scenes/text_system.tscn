@@ -4,3 +4,4 @@
 
 [node name="Text System" type="Node3D" unique_id=1256365715]
 script = ExtResource("1_prn7k")
+current_loaded_text = "res://Text files/the text file.json"

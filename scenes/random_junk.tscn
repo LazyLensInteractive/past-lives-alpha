@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dcxw5mq8qxd3q"]
 
 [ext_resource type="Script" uid="uid://yrnnx7em0885" path="res://startxr.gd" id="1_3302r"]
-[ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://war_guy.tscn" id="1_widmx"]
-[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://shooting_target.tscn" id="2_wftij"]
-[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://player.tscn" id="3_3302r"]
+[ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://scenes/war_guy.tscn" id="1_widmx"]
+[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://scenes/shooting_target.tscn" id="2_wftij"]
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="3_3302r"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_jjuv8"]
-[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://gun2.tscn" id="6_qun86"]
-[ext_resource type="PackedScene" uid="uid://bpyr3ve6dbu3e" path="res://text.tscn" id="7_c1k86"]
+[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://scenes/gun2.tscn" id="6_qun86"]
+[ext_resource type="PackedScene" uid="uid://bpyr3ve6dbu3e" path="res://scenes/text.tscn" id="7_c1k86"]
 [ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://text.gd" id="8_la81f"]
-[ext_resource type="PackedScene" uid="uid://0jalf3ryd6q7" path="res://the_unknown.tscn" id="9_la81f"]
+[ext_resource type="PackedScene" uid="uid://0jalf3ryd6q7" path="res://scenes/the_unknown.tscn" id="9_la81f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qun86"]
 size = Vector3(1.645, 2.91, 1)
@@ -79,13 +79,7 @@ lod0_range = 128.0
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_8p2x7"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_aukyf")])
 
-[sub_resource type="Environment" id="Environment_la81f"]
-background_energy_multiplier = 2.15
-ambient_light_source = 2
-ambient_light_energy = 7.95
-fog_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 1.0
+[sub_resource type="Environment" id="Environment_0ksy5"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xxn7r"]
 
@@ -105,7 +99,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8261373, 1.1500001, 3.8626
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.772131, 0)
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("3_3302r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9940825, 1.9811764, 4.6968417)
+transform = Transform3D(0.16007069, 0, 0.98710555, 0, 1, 0, -0.98710555, 0, 0.16007069, 7.9940825, 1.9811764, 4.6968417)
 
 [node name="Audio_right" type="AudioStreamPlayer3D" parent="Player" unique_id=1496801880]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
@@ -212,10 +206,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7234325, 5.8046856, -24.380
 [node name="shooting target24" parent="shooting targets" unique_id=535066748 instance=ExtResource("2_wftij")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.665186, 5.8046856, -28.587284)
 
-[node name="Text" parent="." unique_id=495269214 node_paths=PackedStringArray("text_location") instance=ExtResource("7_c1k86")]
+[node name="Text" parent="." unique_id=495269214 instance=ExtResource("7_c1k86")]
 transform = Transform3D(0.13702959, 0, 0.99056697, 0, 1, 0, -0.99056697, 0, 0.13702959, -0.80410004, 3.9299257, 3.8976498)
 script = ExtResource("8_la81f")
-text_location = NodePath("../War_guy/WarGuy text location")
 
 [node name="Auto text" type="Timer" parent="Text" unique_id=1062879975]
 wait_time = 3.0
@@ -226,7 +219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.899372, 1.2076211, 5.05416
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=175321010]
-environment = SubResource("Environment_la81f")
+environment = SubResource("Environment_0ksy5")
 camera_attributes = SubResource("CameraAttributesPractical_xxn7r")
 compositor = SubResource("Compositor_aukyf")
 
