@@ -40,8 +40,10 @@ func text_display():
 	var sentance = text_data[current_option]["lines"][current_line]
 	var label = current_text.get_node("Label3D")
 	label.text = ""
+	if not is_instance_valid(label):
+		return
 	for letter in sentance:
-		if local_id != typing_id: 
+		if local_id != typing_id or not is_instance_valid(label):
 			return
 		label.text += letter
 		var typing_variation = randf_range(0.01, 0.2)
