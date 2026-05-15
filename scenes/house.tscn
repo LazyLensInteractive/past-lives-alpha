@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://bv73pub6pbu8k"]
 
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="1_d7po0"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5o5e"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hnrw3"]
@@ -46,3 +48,6 @@ mesh = SubResource("ArrayMesh_ynsnf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893699701]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_g5ubp")
+
+[node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_d7po0")]
+transform = Transform3D(-0.0018500516, 0, -0.9999983, 0, 1, 0, 0.9999983, 0, -0.0018500516, -4.9838448, 0.7604044, 0.695981)
