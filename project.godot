@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addon
 
 Shootable="This variant npcs can target as well"
 Player="Only put the player here"
+Discs="the data discs in the main menu"
 
 [physics]
 

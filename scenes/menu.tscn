@@ -1,12 +1,21 @@
 [gd_scene format=3 uid="uid://d02cwu8e6fqcy"]
 
 [ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="1_lti8b"]
+[ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="2_vjb58"]
+[ext_resource type="PackedScene" uid="uid://dr5twnurduwxj" path="res://textures/nightstandtextured.fbx" id="3_con2f"]
+[ext_resource type="PackedScene" uid="uid://b87a2mfctu55h" path="res://scenes/disc.tscn" id="3_mhnvy"]
+[ext_resource type="PackedScene" uid="uid://3ichohnje7fg" path="res://scenes/test disk check.tscn" id="5_4ytvr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjb58"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vsb4k"]
-size = Vector3(100, 0.3, 100)
+material = SubResource("StandardMaterial3D_vjb58")
+size = Vector3(10000, 0.3, 100000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lti8b"]
-size = Vector3(100, 0.3, 100)
+size = Vector3(100, 0.31, 100)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -25,8 +34,49 @@ sky_material = SubResource("ProceduralSkyMaterial_ouk20")
 [sub_resource type="Environment" id="Environment_4hy44"]
 background_mode = 2
 sky = SubResource("Sky_mae5d")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.11349849, 0.115219705, 0.15091771, 1)
+fog_light_energy = 0.55
+fog_sun_scatter = 0.35
+fog_density = 0.15
+fog_depth_begin = 41.2
+fog_depth_end = 206.2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yqeox"]
+emission_shape_scale = Vector3(70, 30, 70)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -2.2351742e-06
+radial_accel_max = 0.09999776
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqeox"]
+shading_mode = 0
+billboard_mode = 1
+distance_fade_mode = 2
+distance_fade_min_distance = 25.0
+distance_fade_max_distance = 26.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_vjb58"]
+material = SubResource("StandardMaterial3D_yqeox")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_con2f"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mhnvy"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ytvr"]
+size = Vector3(0.48486328, 1.1161499, 0.4960327)
 
 [node name="menu" type="Node3D" unique_id=2043559759]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.01
+shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1513259877]
 
@@ -44,3 +94,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.596717, 19.4482, 10.672138
 
 [node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1822233655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.549007, 0)
+amount = 2000
+lifetime = 45.0
+explosiveness = 0.55
+randomness = 1.0
+visibility_aabb = AABB(-157.43268, -114.6092, -156.75331, 309.6124, 221.21863, 317.6031)
+trail_lifetime = 7.39
+process_material = SubResource("ParticleProcessMaterial_yqeox")
+draw_pass_1 = SubResource("QuadMesh_vjb58")
+
+[node name="menu items" type="Node" parent="." unique_id=1524307629]
+
+[node name="InteractableAreaButton" parent="menu items" unique_id=122276343 instance=ExtResource("2_vjb58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24304527, 0.83190536, -1.4052174)
+button = NodePath("MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="menu items/InteractableAreaButton" unique_id=586158385]
+mesh = SubResource("BoxMesh_con2f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="menu items/InteractableAreaButton" unique_id=341156738]
+shape = SubResource("BoxShape3D_mhnvy")
+
+[node name="nightstandtextured" parent="." unique_id=669468681 instance=ExtResource("3_con2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25933897, 0.15500025, -1.4201384)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="nightstandtextured" unique_id=1067747655]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="nightstandtextured/StaticBody3D" unique_id=1303484389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0036621094, 0.05807495, -0.007904053)
+shape = SubResource("BoxShape3D_4ytvr")
+
+[node name="disc" parent="." unique_id=2060896513 groups=["Discs"] instance=ExtResource("3_mhnvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282605, 0.77615017, -1.2611448)
+
+[node name="disc2" parent="." unique_id=1721086542 groups=["Discs"] instance=ExtResource("3_mhnvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42898646, 0.77615017, -1.296833)
+disc_id = 1
+
+[node name="disc3" parent="." unique_id=1419103421 groups=["Discs"] instance=ExtResource("3_mhnvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10306868, 0.7761502, -1.2290744)
+disc_id = 2
+
+[node name="Node3D" parent="." unique_id=1639338114 instance=ExtResource("5_4ytvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.185313, -1.8732852)

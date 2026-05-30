@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b87a2mfctu55h"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_6wv44"]
+[ext_resource type="Script" uid="uid://csqna3gfl1t3l" path="res://scenes/disc.gd" id="1_kx35p"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kx35p"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.01
+radial_segments = 12
+
+[node name="disc" type="Node3D" unique_id=2060896513]
+script = ExtResource("1_kx35p")
+
+[node name="PickableObject" parent="." unique_id=1531208312 instance=ExtResource("1_6wv44")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PickableObject" unique_id=1363799590]
+mesh = SubResource("CylinderMesh_kx35p")
