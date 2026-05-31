@@ -11,4 +11,4 @@ func start_the_fog():
 	tween_start = true
 	var tween = create_tween()
 	tween.tween_property(environment, "fog_density", 2.0, 10.0)
-	print("Fog transition started!")
+	

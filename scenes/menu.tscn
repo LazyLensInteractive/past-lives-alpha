@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="2_vjb58"]
 [ext_resource type="PackedScene" uid="uid://dr5twnurduwxj" path="res://textures/nightstandtextured.fbx" id="3_con2f"]
 [ext_resource type="PackedScene" uid="uid://b87a2mfctu55h" path="res://scenes/disc.tscn" id="3_mhnvy"]
-[ext_resource type="PackedScene" uid="uid://3ichohnje7fg" path="res://scenes/test disk check.tscn" id="5_4ytvr"]
+[ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://area_3d.gd" id="5_4ytvr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjb58"]
 shading_mode = 0
@@ -33,6 +33,7 @@ sky_material = SubResource("ProceduralSkyMaterial_ouk20")
 
 [sub_resource type="Environment" id="Environment_4hy44"]
 background_mode = 2
+background_energy_multiplier = 10.45
 sky = SubResource("Sky_mae5d")
 fog_enabled = true
 fog_mode = 1
@@ -71,11 +72,15 @@ size = Vector3(0.1, 0.1, 0.1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ytvr"]
 size = Vector3(0.48486328, 1.1161499, 0.4960327)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_2fuwt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ww2rm"]
+
 [node name="menu" type="Node3D" unique_id=2043559759]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_energy = 0.01
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.49877846, -0.783098, 0.37145337, 0.034930464, 0.44638267, 0.8941602, 0, 0, 0)
+light_energy = 4.58
 shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1513259877]
@@ -90,7 +95,7 @@ shape = SubResource("BoxShape3D_lti8b")
 environment = SubResource("Environment_4hy44")
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.596717, 19.4482, 10.672138)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
 
 [node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)
@@ -138,5 +143,18 @@ disc_id = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10306868, 0.7761502, -1.2290744)
 disc_id = 2
 
-[node name="Node3D" parent="." unique_id=1639338114 instance=ExtResource("5_4ytvr")]
+[node name="Node3D" type="Node3D" parent="." unique_id=1639338114]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.185313, -1.8732852)
+
+[node name="Area3D" type="Area3D" parent="Node3D" unique_id=242898821]
+collision_layer = 65537
+collision_mask = 65537
+script = ExtResource("5_4ytvr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Area3D" unique_id=637708138]
+mesh = SubResource("CylinderMesh_2fuwt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D" unique_id=349025458]
+shape = SubResource("CylinderShape3D_ww2rm")
+
+[connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]

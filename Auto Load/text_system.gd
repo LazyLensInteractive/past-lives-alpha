@@ -12,19 +12,20 @@ var typing_id = 0
 func text_load(Path: String):
 	Path = FileAccess.get_file_as_string(Path)
 	if Path == null:
+		print("path for json is not valid")
 		return
 	text_data = JSON.parse_string(Path)
-	print("Keys found in JSON: ", text_data.keys())
+	print("data found in json of these types ", text_data.keys())
 	if text_data == null:
-		print("fucked up lil bro")
+		print("json file was not able to load")
 	else:
-		print("working lil bro")
+		print("json has loaded")
 func text_change(option: String):
 	if current_text == null:
 		print("place to put the text returned null")
 		return
 	if not text_data.has(option):
-		print("json entry not found for", option, "check spelling?")
+		print("json entry not found for ", option, " check spelling?")
 		return
 	current_option = option
 	current_line = 0

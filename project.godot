@@ -23,6 +23,7 @@ XRToolsUserSettings="*uid://bqgb8i74tm0t"
 XRToolsRumbleManager="*uid://by853dk86g1qw"
 TextSystem="*uid://cxikvrlak1p3e"
 SceneSwich="*uid://bq2lvr5pitxxl"
+Randomness="*uid://bcds86eujfghv"
 
 [editor_plugins]
 
