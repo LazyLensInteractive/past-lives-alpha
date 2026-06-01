@@ -1,11 +1,12 @@
 extends WorldEnvironment
 
 
-var tween_start = false
+var tween_start = true
 
 func _process(delta: float) -> void:
+	start_the_fog()
 	if datamanger.player_dead and not tween_start:
-		start_the_fog()
+		return
 
 func start_the_fog():
 	tween_start = true

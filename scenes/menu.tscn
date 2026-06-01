@@ -5,17 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dr5twnurduwxj" path="res://textures/nightstandtextured.fbx" id="3_con2f"]
 [ext_resource type="PackedScene" uid="uid://b87a2mfctu55h" path="res://scenes/disc.tscn" id="3_mhnvy"]
 [ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjb58"]
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_vsb4k"]
-material = SubResource("StandardMaterial3D_vjb58")
-size = Vector3(10000, 0.3, 100000)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lti8b"]
-size = Vector3(100, 0.31, 100)
+[ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/falling_room.tscn" id="6_g3eks"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -76,21 +66,82 @@ size = Vector3(0.48486328, 1.1161499, 0.4960327)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ww2rm"]
 
+[sub_resource type="Animation" id="Animation_g3eks"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("right side floor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(40, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("left side floor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-40, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4ytvr"]
+resource_name = "play_game"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("right side floor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(40, 0, 0), Vector3(41, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("left side floor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-40, 0, 0), Vector3(-41, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g3eks"]
+_data = {
+&"RESET": SubResource("Animation_g3eks"),
+&"play_game": SubResource("Animation_4ytvr")
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4ytvr"]
+size = Vector2(80, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3eks"]
+data = PackedVector3Array(40, 0, 50, -40, 0, 50, 40, 0, -50, -40, 0, 50, -40, 0, -50, 40, 0, -50)
+
 [node name="menu" type="Node3D" unique_id=2043559759]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
 transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.49877846, -0.783098, 0.37145337, 0.034930464, 0.44638267, 0.8941602, 0, 0, 0)
-light_energy = 1.025
-light_indirect_energy = 10.926
+light_color = Color(0.6542321, 0.6542321, 0.654232, 1)
+light_energy = 0.03
+light_indirect_energy = 3.963
 light_volumetric_fog_energy = 0.259
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1513259877]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1126013134]
-mesh = SubResource("BoxMesh_vsb4k")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=834137629]
-shape = SubResource("BoxShape3D_lti8b")
+sky_mode = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=226464839]
 environment = SubResource("Environment_4hy44")
@@ -104,10 +155,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.6678
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1822233655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.549007, 0)
 amount = 2000
-lifetime = 45.0
+lifetime = 10.0
 explosiveness = 0.55
 randomness = 1.0
-visibility_aabb = AABB(-157.43268, -114.6092, -156.75331, 309.6124, 221.21863, 317.6031)
+visibility_aabb = AABB(-73.78832, -32.653645, -73.79954, 147.96436, 65.221596, 147.50269)
 trail_lifetime = 7.39
 process_material = SubResource("ParticleProcessMaterial_yqeox")
 draw_pass_1 = SubResource("QuadMesh_vjb58")
@@ -158,5 +209,29 @@ mesh = SubResource("CylinderMesh_2fuwt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D" unique_id=349025458]
 shape = SubResource("CylinderShape3D_ww2rm")
+
+[node name="Main" type="AnimationPlayer" parent="." unique_id=1841440418]
+libraries/ = SubResource("AnimationLibrary_g3eks")
+
+[node name="left side floor" type="StaticBody3D" parent="." unique_id=1786660873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="left side floor" unique_id=1733789095]
+mesh = SubResource("PlaneMesh_4ytvr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left side floor" unique_id=279546551]
+shape = SubResource("ConcavePolygonShape3D_g3eks")
+
+[node name="right side floor" type="StaticBody3D" parent="." unique_id=1259667657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="right side floor" unique_id=866952790]
+mesh = SubResource("PlaneMesh_4ytvr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right side floor" unique_id=1130318089]
+shape = SubResource("ConcavePolygonShape3D_g3eks")
+
+[node name="falling room" parent="." unique_id=670085850 instance=ExtResource("6_g3eks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06292266, -15.435298, 0.00534606)
 
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
