@@ -1,21 +1,21 @@
 [gd_scene format=4 uid="uid://c0gxd0as0e5jc"]
 
-[ext_resource type="Script" uid="uid://yrnnx7em0885" path="res://startxr.gd" id="1_3302r"]
-[ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://scenes/war_guy.tscn" id="1_widmx"]
-[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://scenes/shooting_target.tscn" id="2_wftij"]
-[ext_resource type="AudioStream" uid="uid://ui1upcr6yl8n" path="res://audio/virtualzero-keyboard-typing-fast-371229.mp3" id="3_5hldt"]
-[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="3_3302r"]
-[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_jjuv8"]
-[ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://text.gd" id="4_xxn7r"]
-[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://scenes/gun2.tscn" id="6_qun86"]
-[ext_resource type="Texture2D" uid="uid://hbwwp4wjysq4" path="res://textures/dirt.png" id="7_8i8dq"]
-[ext_resource type="Texture2D" uid="uid://dao57om11iuk2" path="res://textures/dirt rough.png" id="8_5wsek"]
-[ext_resource type="Environment" uid="uid://bciq6n2jomwx4" path="res://war.tres" id="8_c1k86"]
-[ext_resource type="Texture2D" uid="uid://kj575aqfgsns" path="res://textures/rock.png" id="9_imt3h"]
-[ext_resource type="PackedScene" uid="uid://0jalf3ryd6q7" path="res://scenes/the_unknown.tscn" id="9_la81f"]
-[ext_resource type="Script" uid="uid://bn6h4wjvq0v57" path="res://world_environment.gd" id="9_xxn7r"]
-[ext_resource type="Texture2D" uid="uid://bp44lwh7elmcs" path="res://textures/rock rough.png" id="10_fp7of"]
-[ext_resource type="Texture2D" uid="uid://b1hx7ru6booh5" path="res://textures/nightstandtextured_0.png" id="16_c2fu3"]
+[ext_resource type="Script" uid="uid://yrnnx7em0885" path="res://scripts/startxr.gd" id="1_cyx1q"]
+[ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://scenes/war_guy.tscn" id="2_lsrh3"]
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="3_chv2k"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_8vnrj"]
+[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://scenes/gun2.tscn" id="5_qt0k1"]
+[ext_resource type="Texture2D" uid="uid://hbwwp4wjysq4" path="res://textures/dirt.png" id="6_lkifk"]
+[ext_resource type="Texture2D" uid="uid://dao57om11iuk2" path="res://textures/dirt rough.png" id="7_hx6ow"]
+[ext_resource type="Texture2D" uid="uid://kj575aqfgsns" path="res://textures/rock.png" id="8_65283"]
+[ext_resource type="Texture2D" uid="uid://bp44lwh7elmcs" path="res://textures/rock rough.png" id="9_gy1n2"]
+[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://scenes/shooting_target.tscn" id="10_7v75m"]
+[ext_resource type="PackedScene" uid="uid://0jalf3ryd6q7" path="res://scenes/the_unknown.tscn" id="11_w7o7m"]
+[ext_resource type="Environment" uid="uid://bciq6n2jomwx4" path="res://enviroment data/data/war.tres" id="12_vvdgt"]
+[ext_resource type="Script" uid="uid://bn6h4wjvq0v57" path="res://enviroment data/control scripts/world_environment.gd" id="13_w0ang"]
+[ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://scripts/text.gd" id="14_68q7g"]
+[ext_resource type="AudioStream" uid="uid://ui1upcr6yl8n" path="res://audio/virtualzero-keyboard-typing-fast-371229.mp3" id="15_7iet6"]
+[ext_resource type="Texture2D" uid="uid://b1hx7ru6booh5" path="res://textures/nightstandtextured_0.png" id="16_muaym"]
 
 [sub_resource type="Gradient" id="Gradient_qun86"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -78,14 +78,14 @@ lod0_range = 128.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_luwuw"]
 name = "dirt"
-albedo_texture = ExtResource("7_8i8dq")
-normal_texture = ExtResource("8_5wsek")
+albedo_texture = ExtResource("6_lkifk")
+normal_texture = ExtResource("7_hx6ow")
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_7vuf0"]
 name = "rock"
 id = 1
-albedo_texture = ExtResource("9_imt3h")
-normal_texture = ExtResource("10_fp7of")
+albedo_texture = ExtResource("8_65283")
+normal_texture = ExtResource("9_gy1n2")
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_8p2x7"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_aukyf")])
@@ -101,7 +101,7 @@ data = PackedVector3Array(-0.0019999999, -0.0018999999, 0, -0.0022, -0.001899999
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ayqy"]
 resource_name = "painted_wooden_nightstand"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("16_c2fu3")
+albedo_texture = ExtResource("16_muaym")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
@@ -143,19 +143,19 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_il7on")
 
 [node name="Random junk" type="Node3D" unique_id=440313742]
-script = ExtResource("1_3302r")
+script = ExtResource("1_cyx1q")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=470526976]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="War_guy" parent="." unique_id=1047141349 instance=ExtResource("1_widmx")]
+[node name="War_guy" parent="." unique_id=1047141349 instance=ExtResource("2_lsrh3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8261373, 1.1500001, 3.8626904)
 
 [node name="WarGuy text location" type="Marker3D" parent="War_guy" unique_id=1877032978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.772131, 0)
 
-[node name="Player" parent="." unique_id=955110433 instance=ExtResource("3_3302r")]
+[node name="Player" parent="." unique_id=955110433 instance=ExtResource("3_chv2k")]
 transform = Transform3D(0.9999296, 0, 0.01186797, 0, 1, 0, -0.01186797, 0, 0.9999296, 7.9940825, 1.9811764, 4.6968417)
 
 [node name="Audio_right" type="AudioStreamPlayer3D" parent="Player" unique_id=1496801880]
@@ -170,9 +170,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014412403, 0, -0.18498182)
 [node name="text lock" type="Marker3D" parent="Player" unique_id=508253999]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46716905, 0, -0.9743309)
 
-[node name="StartXR" parent="." unique_id=1492552891 instance=ExtResource("4_jjuv8")]
+[node name="StartXR" parent="." unique_id=1492552891 instance=ExtResource("4_8vnrj")]
 
-[node name="PickableObject" parent="." unique_id=1612233214 instance=ExtResource("6_qun86")]
+[node name="PickableObject" parent="." unique_id=1612233214 instance=ExtResource("5_qt0k1")]
 transform = Transform3D(0.015533256, 0.73602766, 0.67677325, 0.9997774, -0.021099476, 0, 0.014279561, 0.67662257, -0.7361916, 8.027016, 1.7687678, 2.9816215)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1321912389]
@@ -184,91 +184,91 @@ metadata/_edit_lock_ = true
 
 [node name="shooting targets" type="Node" parent="." unique_id=280073788]
 
-[node name="shooting target" parent="shooting targets" unique_id=1422117074 instance=ExtResource("2_wftij")]
+[node name="shooting target" parent="shooting targets" unique_id=1422117074 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1079292, 2.744514, -5.755076)
 
-[node name="shooting target2" parent="shooting targets" unique_id=2105063439 instance=ExtResource("2_wftij")]
+[node name="shooting target2" parent="shooting targets" unique_id=2105063439 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.292843, 0.65779823, -20.986755)
 
-[node name="shooting target3" parent="shooting targets" unique_id=1426778745 instance=ExtResource("2_wftij")]
+[node name="shooting target3" parent="shooting targets" unique_id=1426778745 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.153898, 0.65779823, -8.645625)
 
-[node name="shooting target4" parent="shooting targets" unique_id=1328068505 instance=ExtResource("2_wftij")]
+[node name="shooting target4" parent="shooting targets" unique_id=1328068505 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.212145, 0.65779823, -12.852147)
 
-[node name="shooting target5" parent="shooting targets" unique_id=1480602617 instance=ExtResource("2_wftij")]
+[node name="shooting target5" parent="shooting targets" unique_id=1480602617 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.457655, 7.936834, -7.6754823)
 
-[node name="shooting target6" parent="shooting targets" unique_id=443917052 instance=ExtResource("2_wftij")]
+[node name="shooting target6" parent="shooting targets" unique_id=443917052 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2727413, 5.850118, -22.907162)
 
-[node name="shooting target7" parent="shooting targets" unique_id=1788240424 instance=ExtResource("2_wftij")]
+[node name="shooting target7" parent="shooting targets" unique_id=1788240424 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.588314, 5.850118, -10.566031)
 
-[node name="shooting target8" parent="shooting targets" unique_id=967628931 instance=ExtResource("2_wftij")]
+[node name="shooting target8" parent="shooting targets" unique_id=967628931 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6465607, 5.850118, -14.772553)
 
-[node name="shooting target9" parent="shooting targets" unique_id=965334466 instance=ExtResource("2_wftij")]
+[node name="shooting target9" parent="shooting targets" unique_id=965334466 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.581257, 4.843805, -21.490211)
 
-[node name="shooting target10" parent="shooting targets" unique_id=939690908 instance=ExtResource("2_wftij")]
+[node name="shooting target10" parent="shooting targets" unique_id=939690908 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6036568, 2.7570891, -36.721893)
 
-[node name="shooting target11" parent="shooting targets" unique_id=2110562652 instance=ExtResource("2_wftij")]
+[node name="shooting target11" parent="shooting targets" unique_id=2110562652 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.464712, 2.7570891, -24.38076)
 
-[node name="shooting target12" parent="shooting targets" unique_id=1207107942 instance=ExtResource("2_wftij")]
+[node name="shooting target12" parent="shooting targets" unique_id=1207107942 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5229588, 2.7570891, -28.587284)
 
-[node name="shooting target13" parent="shooting targets" unique_id=435909102 instance=ExtResource("2_wftij")]
+[node name="shooting target13" parent="shooting targets" unique_id=435909102 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.080215, 5.7921104, -5.755076)
 
-[node name="shooting target14" parent="shooting targets" unique_id=346357295 instance=ExtResource("2_wftij")]
+[node name="shooting target14" parent="shooting targets" unique_id=346357295 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.895302, 3.7053938, -20.986755)
 
-[node name="shooting target15" parent="shooting targets" unique_id=874007175 instance=ExtResource("2_wftij")]
+[node name="shooting target15" parent="shooting targets" unique_id=874007175 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9657536, 3.7053938, -8.645625)
 
-[node name="shooting target16" parent="shooting targets" unique_id=1665573818 instance=ExtResource("2_wftij")]
+[node name="shooting target16" parent="shooting targets" unique_id=1665573818 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97599983, 3.7053938, -12.852147)
 
-[node name="shooting target17" parent="shooting targets" unique_id=2120483324 instance=ExtResource("2_wftij")]
+[node name="shooting target17" parent="shooting targets" unique_id=2120483324 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6458, 10.98443, -7.6754823)
 
-[node name="shooting target18" parent="shooting targets" unique_id=785061067 instance=ExtResource("2_wftij")]
+[node name="shooting target18" parent="shooting targets" unique_id=785061067 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.460886, 8.897715, -22.907162)
 
-[node name="shooting target19" parent="shooting targets" unique_id=2062561577 instance=ExtResource("2_wftij")]
+[node name="shooting target19" parent="shooting targets" unique_id=2062561577 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5998306, 8.897715, -10.566031)
 
-[node name="shooting target20" parent="shooting targets" unique_id=1556803832 instance=ExtResource("2_wftij")]
+[node name="shooting target20" parent="shooting targets" unique_id=1556803832 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.541584, 8.897715, -14.772553)
 
-[node name="shooting target21" parent="shooting targets" unique_id=1281570209 instance=ExtResource("2_wftij")]
+[node name="shooting target21" parent="shooting targets" unique_id=1281570209 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.769402, 7.8914013, -21.490211)
 
-[node name="shooting target22" parent="shooting targets" unique_id=1467332466 instance=ExtResource("2_wftij")]
+[node name="shooting target22" parent="shooting targets" unique_id=1467332466 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.584488, 5.8046856, -36.721893)
 
-[node name="shooting target23" parent="shooting targets" unique_id=908188193 instance=ExtResource("2_wftij")]
+[node name="shooting target23" parent="shooting targets" unique_id=908188193 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7234325, 5.8046856, -24.38076)
 
-[node name="shooting target24" parent="shooting targets" unique_id=535066748 instance=ExtResource("2_wftij")]
+[node name="shooting target24" parent="shooting targets" unique_id=535066748 instance=ExtResource("10_7v75m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.665186, 5.8046856, -28.587284)
 
-[node name="the unknown" parent="." unique_id=1976924433 instance=ExtResource("9_la81f")]
+[node name="the unknown" parent="." unique_id=1976924433 instance=ExtResource("11_w7o7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.899372, 1.2076211, 5.054166)
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=175321010]
-environment = ExtResource("8_c1k86")
+environment = ExtResource("12_vvdgt")
 camera_attributes = SubResource("CameraAttributesPractical_xxn7r")
 compositor = SubResource("Compositor_aukyf")
-script = ExtResource("9_xxn7r")
+script = ExtResource("13_w0ang")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1433677660 node_paths=PackedStringArray("npc_head_marker", "camera_edge_marker")]
 transform = Transform3D(0.2381266, 0, 0.97123414, 0, 1, 0, -0.97123414, 0, 0.2381266, 6.413929, 1.9811764, 4.6968417)
-script = ExtResource("4_xxn7r")
+script = ExtResource("14_68q7g")
 npc_head_marker = NodePath("../War_guy/WarGuy text location")
 camera_edge_marker = NodePath("../Player/text lock")
 
@@ -276,7 +276,7 @@ camera_edge_marker = NodePath("../Player/text lock")
 
 [node name="typing audio" type="AudioStreamPlayer3D" parent="Node3D/Label3D" unique_id=1777661519]
 transform = Transform3D(0.2381266, 0, -0.97123414, 0, 1, 0, 0.97123414, 0, 0.2381266, -0.9138961, -0.8311763, -7.2304335)
-stream = ExtResource("3_5hldt")
+stream = ExtResource("15_7iet6")
 volume_db = 14.549
 
 [node name="auto_text" type="Timer" parent="Node3D" unique_id=13803536]

@@ -1,6 +1,6 @@
 extends Node
 var player_dead = false
-
+var current_disc = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

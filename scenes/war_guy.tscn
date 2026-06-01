@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xqyoluqxre4e"]
 
-[ext_resource type="Script" uid="uid://dr3ubc0vavxmh" path="res://target.gd" id="1_ijn8t"]
+[ext_resource type="Script" uid="uid://dr3ubc0vavxmh" path="res://scripts/target.gd" id="1_ijn8t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gjg8o"]
 height = 3.0

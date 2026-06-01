@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="2_vjb58"]
 [ext_resource type="PackedScene" uid="uid://dr5twnurduwxj" path="res://textures/nightstandtextured.fbx" id="3_con2f"]
 [ext_resource type="PackedScene" uid="uid://b87a2mfctu55h" path="res://scenes/disc.tscn" id="3_mhnvy"]
-[ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://area_3d.gd" id="5_4ytvr"]
+[ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjb58"]
 shading_mode = 0
@@ -80,8 +80,9 @@ size = Vector3(0.48486328, 1.1161499, 0.4960327)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
 transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.49877846, -0.783098, 0.37145337, 0.034930464, 0.44638267, 0.8941602, 0, 0, 0)
-light_energy = 4.58
-shadow_enabled = true
+light_energy = 1.025
+light_indirect_energy = 10.926
+light_volumetric_fog_energy = 0.259
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1513259877]
 
@@ -134,21 +135,22 @@ shape = SubResource("BoxShape3D_4ytvr")
 
 [node name="disc" parent="." unique_id=2060896513 groups=["Discs"] instance=ExtResource("3_mhnvy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282605, 0.77615017, -1.2611448)
+disc_id = 1
 
 [node name="disc2" parent="." unique_id=1721086542 groups=["Discs"] instance=ExtResource("3_mhnvy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42898646, 0.77615017, -1.296833)
-disc_id = 1
+disc_id = 2
 
 [node name="disc3" parent="." unique_id=1419103421 groups=["Discs"] instance=ExtResource("3_mhnvy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10306868, 0.7761502, -1.2290744)
-disc_id = 2
+disc_id = 3
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1639338114]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.185313, -1.8732852)
 
 [node name="Area3D" type="Area3D" parent="Node3D" unique_id=242898821]
-collision_layer = 65537
-collision_mask = 65537
+collision_layer = 65543
+collision_mask = 65543
 script = ExtResource("5_4ytvr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Area3D" unique_id=637708138]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_o6p30"]
 [ext_resource type="ArrayMesh" uid="uid://dxv5irjhfqlhc" path="res://res files/gun.res" id="2_q4rdv"]
-[ext_resource type="Script" uid="uid://dhebgb6ou1hrs" path="res://player gun.gd" id="6_72rl8"]
+[ext_resource type="Script" uid="uid://dhebgb6ou1hrs" path="res://scripts/player gun.gd" id="6_72rl8"]
 [ext_resource type="Script" uid="uid://dx3swqg2owe4p" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="7_c0m3e"]
 [ext_resource type="Script" uid="uid://cloxfr8r3b00u" path="res://addons/godot-xr-tools/interactables/interactable_slider.gd" id="8_0krtc"]
 [ext_resource type="AudioStream" uid="uid://dyf2dcodyef33" path="res://audio/freesound_community-realistic-shot-81087.mp3" id="9_j28cv"]

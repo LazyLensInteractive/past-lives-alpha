@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_6cxod"]
 [ext_resource type="Texture2D" uid="uid://v5rmps4dlsfi" path="res://textures/RE-45 Autopistol_Base_Color.png" id="2_a8a1d"]
-[ext_resource type="Script" uid="uid://dhebgb6ou1hrs" path="res://player gun.gd" id="2_nkrqv"]
+[ext_resource type="Script" uid="uid://dhebgb6ou1hrs" path="res://scripts/player gun.gd" id="2_nkrqv"]
 [ext_resource type="Texture2D" uid="uid://dfdqbbw1ugm6d" path="res://textures/RE-45 Autopistol_Metallic.png" id="3_ottym"]
 [ext_resource type="Script" uid="uid://dx3swqg2owe4p" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="3_xxsfv"]
 [ext_resource type="Texture2D" uid="uid://b5l6cgxjk0ht5" path="res://textures/RE-45 Autopistol_Normal_DirectX.png" id="4_bsf1b"]

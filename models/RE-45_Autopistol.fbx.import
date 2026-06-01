@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dnx0ry4searhr"
-path="res://.godot/imported/RE-45_Autopistol.fbx-73c2e786db34d89ce4c987b00b2e228f.scn"
+path="res://.godot/imported/RE-45_Autopistol.fbx-93ed6c4c84dafd22df10053d9e61c3f3.scn"
 
 [deps]
 
-source_file="res://RE-45_Autopistol.fbx"
-dest_files=["res://.godot/imported/RE-45_Autopistol.fbx-73c2e786db34d89ce4c987b00b2e228f.scn"]
+source_file="res://models/RE-45_Autopistol.fbx"
+dest_files=["res://.godot/imported/RE-45_Autopistol.fbx-93ed6c4c84dafd22df10053d9e61c3f3.scn"]
 
 [params]
 
