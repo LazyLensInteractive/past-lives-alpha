@@ -8,7 +8,29 @@ shading_mode = 0
 material = SubResource("StandardMaterial3D_eg4p6")
 size = Vector3(160, 30, 100)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eg4p6"]
+size = Vector3(160, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25j32"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_67yvo"]
+material = SubResource("StandardMaterial3D_25j32")
+text = "I Thought We were Soul Tied....."
+font_size = 53
+
 [node name="falling room" type="Node3D" unique_id=670085850]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1823659833]
 mesh = SubResource("BoxMesh_25j32")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1906690679]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=379523872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.931468, 0)
+shape = SubResource("BoxShape3D_eg4p6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=164435779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4827347, -6.3834887)
+mesh = SubResource("TextMesh_67yvo")
