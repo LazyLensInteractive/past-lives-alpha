@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b87a2mfctu55h" path="res://scenes/disc.tscn" id="3_mhnvy"]
 [ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
 [ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/falling_room.tscn" id="6_g3eks"]
-[ext_resource type="Script" uid="uid://dqxwxnirlt4ke" path="res://scenes/control_for_after_fall_game_start.gd" id="7_v86rl"]
+[ext_resource type="Script" uid="uid://dqxwxnirlt4ke" path="res://scripts/control_for_after_fall_game_start.gd" id="7_v86rl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
 sky_top_color = Color(0, 0, 0, 1)
