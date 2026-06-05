@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
 [ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/falling_room.tscn" id="6_g3eks"]
 [ext_resource type="Script" uid="uid://dqxwxnirlt4ke" path="res://scripts/control_for_after_fall_game_start.gd" id="7_v86rl"]
+[ext_resource type="PackedScene" uid="uid://dh6v01pu4hfv4" path="res://scenes/table_(after_fall_menu).tscn" id="8_13sgg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -350,6 +351,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06292266, -15.435298, 0.00
 
 [node name="control for after fall game start" type="Node" parent="." unique_id=596336022]
 script = ExtResource("7_v86rl")
+
+[node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("8_13sgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.05024, -20.86576, -13.569389)
 
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
 [connection signal="start_episode_0" from="falling room" to="control for after fall game start" method="_on_falling_room_start_episode_0" flags=6]
