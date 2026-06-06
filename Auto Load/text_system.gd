@@ -6,7 +6,7 @@ var current_line = 0
 var current_option = ""
 var is_typing = false
 var typing_id = 0
-
+signal done_talking #only use this for timing and when you can change scenes
 
 @export_file("*.json") var current_loaded_text: String = ""
 func text_load(Path: String):
@@ -39,7 +39,7 @@ func text_display():
 	var local_id = typing_id
 	is_typing = true
 	var sentance = text_data[current_option]["lines"][current_line]
-	var label = current_text.get_node("Label3D")
+	var label = current_text.get_node("TextViewport/RichTextLabel")
 	label.text = ""
 	if not is_instance_valid(label):
 		return
@@ -58,5 +58,6 @@ func step_text():
 		current_line += 1
 		text_display()
 	else:
-		current_text.get_node("Label3D").text = ""
+		current_text.get_node("TextViewport/RichTextLabel").text = ""
 		current_option = ""
+		done_talking.emit(typing_id)

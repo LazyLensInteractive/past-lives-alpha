@@ -1,5 +1,5 @@
 extends Node3D
-
+#put the tscn into a scene choose the diolouge kee and make a marker for the npc marker for the player should already exist and audio for variation between 'voices'
 @export var dialogue_key: String = "war_guy" 
 @export var auto_start: bool = true
 @export var npc_head_marker: Marker3D
@@ -8,7 +8,7 @@ extends Node3D
 @export var look_threshold: float = 0.7
 @export var typing_audio: AudioStreamPlayer3D
 var xr_camera: XRCamera3D
-@onready var label_3d: Label3D = $Label3D 
+@onready var text_mesh: MeshInstance3D = $MeshInstance3D
 
 func _ready() -> void:
 	xr_camera = get_viewport().get_camera_3d()
@@ -26,10 +26,10 @@ func _process(delta: float) -> void:
 	var goal_position: Vector3
 	if look_amount > look_threshold:
 		goal_position = npc_head_marker.global_position
-		label_3d.pixel_size = 0.005
+		text_mesh.scale = Vector3(1, 1, 1)
 	else:
 		goal_position = camera_edge_marker.global_position
-		label_3d.pixel_size = 0.001
+		text_mesh.scale = Vector3(0.2, 0.2, 0.2)
 	global_position = global_position.lerp(goal_position, slide_speed * delta)
 	look_at(xr_camera.global_position, Vector3.UP)
 	rotate_object_local(Vector3.UP, PI)
