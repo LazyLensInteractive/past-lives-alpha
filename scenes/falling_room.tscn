@@ -29,7 +29,6 @@ size = Vector3(12.764893, 8.812225, 10.365234)
 script = ExtResource("1_25j32")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1823659833]
-visible = false
 mesh = SubResource("BoxMesh_25j32")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1906690679]

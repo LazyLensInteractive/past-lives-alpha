@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Past-lives-alpha"
 run/main_scene="uid://d02cwu8e6fqcy"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 
 [autoload]
 
@@ -33,6 +33,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addon
 Shootable="This variant npcs can target as well"
 Player="Only put the player here"
 Discs="the data discs in the main menu"
+xr_hands="well its your hands mostly used to call drop from anywhere"
 
 [layer_names]
 
@@ -58,6 +59,7 @@ Discs="the data discs in the main menu"
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+anti_aliasing/quality/msaa_3d=1
 
 [xr]
 

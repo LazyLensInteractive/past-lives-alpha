@@ -28,7 +28,7 @@ metadata/_custom_type_script = "uid://ck4yn3hxuobj7"
 [node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=767302225]
 tracker = &"left_hand"
 
-[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/XRController3D" unique_id=692198607]
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/XRController3D" unique_id=692198607 groups=["xr_hands"]]
 script = ExtResource("3_i3pqv")
 metadata/_custom_type_script = "uid://b18kkstg643yw"
 
@@ -43,7 +43,7 @@ tracker = &"right_hand"
 script = ExtResource("3_i3pqv")
 metadata/_custom_type_script = "uid://b18kkstg643yw"
 
-[node name="RightHand" parent="XROrigin3D/XRController3D2" unique_id=839002924 instance=ExtResource("5_2hs0m")]
+[node name="RightHand" parent="XROrigin3D/XRController3D2" unique_id=839002924 groups=["xr_hands"] instance=ExtResource("5_2hs0m")]
 
 [node name="MovementDirect" parent="XROrigin3D/XRController3D2" unique_id=1375829759 instance=ExtResource("6_dw050")]
 
