@@ -1,8 +1,8 @@
 extends Node3D
 @export var disc_id = 0
-@onready var cassete_control: AnimationPlayer = $"../Table (after fall menu)/portable_cassette_player_1k/StaticBody3D/cassete body/cassete lid/cassete control"
 @onready var pickable_object: XRToolsPickable = $PickableObject
-@onready var marker_3d: Marker3D = $"../Table (after fall menu)/portable_cassette_player_1k/Marker3D"
+@onready var lid: RigidBody3D = $"../RigidBody3D2"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,11 +11,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(pickable_object.global_position)
+	pass#print(pickable_object.global_position)
 
 
 func _on_area_3d_cassette_in() -> void:
 	print("yeah")
+	lid.freeze = false
 	pickable_object.freeze = true
 	pickable_object.drop_and_free()
-	cassete_control.play("lock cartridge")
+#	cassete_control.play("lock cartridge")

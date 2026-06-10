@@ -4,12 +4,13 @@ extends Area3D
 @export var dummy_cassette: MeshInstance3D 
 signal cassette_in
 var is_tape_inside = false
+
 func _ready() -> void:
 	if dummy_cassette:
 		dummy_cassette.visible = false
 
 func _on_body_entered(body: Node3D) -> void:
-	print("enter")
+	print(body)
 	var disc_parent = body.get_parent()
 	if "disc_id" in disc_parent:
 		monitoring = false
@@ -26,6 +27,9 @@ func start_game_sequence() -> void:
 		main.play("play_game")
 func _on_lid_detect_body_entered(body: Node3D) -> void:
 	if is_tape_inside:
+		if not body.is_in_group("cassetee lid"):
+			print(body)
+			return
 		start_game_sequence() 
 	else:
-		print("tape not inside lid shut")
+		print("tape not inside but lid shut")
