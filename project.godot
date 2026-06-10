@@ -60,6 +60,7 @@ xr_hands="well its your hands mostly used to call drop from anywhere"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
 anti_aliasing/quality/msaa_3d=1
+occlusion_culling/use_occlusion_culling=true
 
 [xr]
 

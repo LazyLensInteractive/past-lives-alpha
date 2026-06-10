@@ -17,7 +17,5 @@ func _process(delta: float) -> void:
 func _on_area_3d_cassette_in() -> void:
 	print("yeah")
 	pickable_object.freeze = true
-	pickable_object.drop()
-	#var tween = create_tween()
-	#tween.tween_property(self, "global_position", marker_3d.global_position, 1.3)
+	pickable_object.drop_and_free()
 	cassete_control.play("lock cartridge")
