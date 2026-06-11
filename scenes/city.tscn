@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://bqjske7c8jyim"]
+
+[ext_resource type="Shader" uid="uid://dyv2x0ueedd3y" path="res://shaders/sky.gdshader" id="1_58ubr"]
+[ext_resource type="Shader" uid="uid://bw1bi7a878sbs" path="res://shaders/neon.gdshader" id="1_bih7l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rqxma"]
+shader = ExtResource("1_58ubr")
+shader_parameter/color_zenith = Color(0.37493095, 0.066842385, 0.28483525, 1)
+shader_parameter/color_horizon = Color(0.52021986, 0.4056028, 0.72534335, 1)
+shader_parameter/star_density = 86.6400040679
+shader_parameter/star_size = 0.11600000481148
+shader_parameter/flicker_speed = 4.69600019931
+
+[sub_resource type="Sky" id="Sky_58ubr"]
+sky_material = SubResource("ShaderMaterial_rqxma")
+
+[sub_resource type="Environment" id="Environment_rqxma"]
+background_mode = 2
+sky = SubResource("Sky_58ubr")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.16571689, 0.18378729, 0.21190506, 1)
+fog_light_energy = 0.79
+fog_density = 0.0346
+fog_sky_affect = 0.853
+fog_height = -472.65
+volumetric_fog_density = 0.7065
+volumetric_fog_emission_energy = 631.41
+adjustment_enabled = true
+adjustment_brightness = 0.67
+adjustment_contrast = 1.25
+adjustment_saturation = 2.0
+
+[sub_resource type="Gradient" id="Gradient_movw8"]
+offsets = PackedFloat32Array(0.7487837, 0.99593, 1)
+colors = PackedColorArray(0.41329563, 0.41790935, 0.85464126, 1, 0.042921968, 0.042921968, 0.042921968, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_drx7m"]
+gradient = SubResource("Gradient_movw8")
+use_hdr = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bih7l"]
+frequency = 0.0004
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_txhch"]
+noise = SubResource("FastNoiseLite_bih7l")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oacpt"]
+render_priority = 0
+shader = ExtResource("1_bih7l")
+shader_parameter/window_scale = Vector2(22.434, 87.528)
+shader_parameter/neon_gradient = SubResource("GradientTexture1D_drx7m")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_txhch")
+shader_parameter/noise_scale = 1.0
+shader_parameter/movement_speed = 0.2
+shader_parameter/min_brightness = 3.0
+shader_parameter/max_brightness = 12.0
+shader_parameter/pulse_speed = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yq6h"]
+material = SubResource("ShaderMaterial_oacpt")
+size = Vector3(10, 70, 10.590332)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oe7kc"]
+size = Vector3(900, 1, 900)
+
+[node name="city" type="Node3D" unique_id=961777772]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=631557481]
+environment = SubResource("Environment_rqxma")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1105624166]
+transform = Transform3D(-0.9135454, 0.18021329, -0.36463383, 0.21457806, 0.97511923, -0.05566506, 0.34552988, -0.12909499, -0.9294856, 0, 0, 0)
+light_color = Color(0.36236575, 0.6653061, 0.7309116, 1)
+light_energy = 2.445
+shadow_enabled = true
+directional_shadow_max_distance = 58.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2040662085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.243769, 16.679955, -50.242554)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1710997306]
+transform = Transform3D(0.99233854, 0.12347807, -0.0041769976, -0.12349601, 0.99233556, -0.0043503395, 0.0036078114, 0.004832852, 0.9999818, -21.898275, 16.679955, -51.367256)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=734687895]
+transform = Transform3D(0.9997735, 0.020959549, -0.0037083554, -0.020977087, 0.9997688, -0.00475614, 0.0036078119, 0.0048328526, 0.99998194, -75.03447, 16.679955, -119.64546)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1081443287]
+transform = Transform3D(0.9997735, 0.020959549, -0.0037083554, -0.020977087, 0.9997688, -0.00475614, 0.0036078119, 0.0048328526, 0.99998194, -87.607704, 16.972286, -98.799965)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1266360439]
+transform = Transform3D(0.9997735, 0.020959549, -0.0037083554, -0.020977087, 0.9997688, -0.00475614, 0.0036078119, 0.0048328526, 0.99998194, 41.084297, 16.972286, -130.92352)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1724432641]
+transform = Transform3D(0.9997735, 0.020959549, -0.0037083554, -0.020977087, 0.9997688, -0.00475614, 0.0036078119, 0.0048328526, 0.99998194, 86.04676, 16.972286, -90.06404)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=896292666]
+transform = Transform3D(0.9997735, 0.020959549, -0.0037083554, -0.020977087, 0.9997688, -0.00475614, 0.0036078119, 0.0048328526, 0.99998194, 86.04676, 16.972286, -97.233055)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=1752400292]
+transform = Transform3D(-0.9977242, -0.02123864, -0.06399677, -0.030810343, 0.98782146, 0.15251157, 0.05997823, 0.15413624, -0.9862276, 77.40104, 16.972286, -97.233055)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=415439977]
+transform = Transform3D(-0.9977242, -0.02123864, -0.06399677, -0.030810343, 0.98782146, 0.15251157, 0.05997823, 0.15413624, -0.9862276, 78.99196, -3.813181, -97.233055)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=1266835915]
+transform = Transform3D(-0.9977242, -0.02123864, -0.06399677, -0.030810343, 0.98782146, 0.15251157, 0.05997823, 0.15413624, -0.9862276, 36.554848, -3.813181, -137.48898)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=1173593260]
+transform = Transform3D(0.053548403, 0.24061444, -0.9691426, 0.9957305, 0.06021166, 0.069966584, 0.07518862, -0.96875155, -0.23636289, -9.564663, 15.940542, -91.82241)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=305084508]
+transform = Transform3D(0.96803683, 0.12778832, -0.21581115, 0.14476697, -0.98734653, 0.06472537, -0.20480925, -0.09389895, -0.9742875, 3.5438118, 4.934149, -120.65809)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="." unique_id=2142327296]
+transform = Transform3D(0.96803683, 0.12778832, -0.21581115, 0.14476697, -0.98734653, 0.06472537, -0.20480925, -0.09389895, -0.9742875, 12.907642, 4.934149, -120.65809)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="." unique_id=38617946]
+transform = Transform3D(-0.13361448, 0.9887523, -0.067205235, 0.96963906, 0.116414696, -0.21505181, -0.20480928, -0.09389897, -0.9742875, 12.907642, 41.878258, -120.65809)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="." unique_id=1387811501]
+transform = Transform3D(0.26411057, 0.24892059, 0.9318176, -0.0603508, 0.9684945, -0.24161243, -0.9626021, 0.0075765317, 0.27081212, -99.56414, 19.828289, -120.65809)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="." unique_id=1846003324]
+mesh = SubResource("BoxMesh_oe7kc")

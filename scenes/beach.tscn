@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://nfg5srd6en7x"]
+
+[ext_resource type="Texture2D" uid="uid://bmp4cjmef1dyq" path="res://materials/sand/sand_03_diff_2k.jpg" id="1_43n2k"]
+[ext_resource type="Texture2D" uid="uid://dhxy3w1v6v73i" path="res://materials/sand/sand_03_nor_gl_2k.jpg" id="2_tdq1v"]
+[ext_resource type="Shader" uid="uid://d4kbwcfsatqau" path="res://materials/water.gdshader" id="3_wmx66"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jyhqs"]
+rayleigh_color = Color(3.2247603e-06, 0.44573295, 0.5894553, 1)
+
+[sub_resource type="Sky" id="Sky_43n2k"]
+sky_material = SubResource("PhysicalSkyMaterial_jyhqs")
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_tdq1v"]
+background_mode = 2
+sky = SubResource("Sky_43n2k")
+tonemap_mode = 1
+tonemap_exposure = 0.44
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_wvdmf"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dme51"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_64oux"]
+noise = SubResource("FastNoiseLite_dme51")
+color_ramp = SubResource("Gradient_wvdmf")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_43n2k"]
+_shader_parameters = {
+&"bias_distance": 512.0,
+&"blend_sharpness": 0.5,
+&"depth_blur": 0.0,
+&"enable_macro_variation": true,
+&"enable_projection": true,
+&"flat_terrain_normals": false,
+&"macro_variation1": Color(1, 1, 1, 1),
+&"macro_variation2": Color(1, 1, 1, 1),
+&"macro_variation_slope": 0.333,
+&"mipmap_bias": 1.0,
+&"noise1_angle": 0.0,
+&"noise1_offset": Vector2(0.5, 0.5),
+&"noise1_scale": 0.04,
+&"noise2_scale": 0.076,
+&"noise_texture": SubResource("NoiseTexture2D_64oux"),
+&"projection_threshold": 0.8
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdq1v"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_wmx66"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_tdq1v")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_b35ig"]
+name = "sand_03_diff_2k"
+albedo_color = Color(0.2015546, 0.20155463, 0.20155463, 1)
+albedo_texture = ExtResource("1_43n2k")
+normal_texture = ExtResource("2_tdq1v")
+normal_depth = 1.381
+roughness = 0.492
+detiling_rotation = 0.332
+detiling_shift = 0.259
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_3t5gu"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wmx66")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_b35ig")])
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5yq6h"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_64oux"]
+noise_type = 3
+frequency = 0.0168
+domain_warp_enabled = true
+domain_warp_amplitude = 49.594
+domain_warp_frequency = 0.019
+domain_warp_fractal_type = 0
+domain_warp_fractal_octaves = 4
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dme51"]
+width = 4096
+height = 4096
+noise = SubResource("FastNoiseLite_64oux")
+seamless = true
+as_normal_map = true
+bump_strength = 2.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wvdmf"]
+render_priority = 0
+shader = ExtResource("3_wmx66")
+shader_parameter/normal_map = SubResource("NoiseTexture2D_dme51")
+shader_parameter/color = Color(0.1487079, 0.3811967, 0.39993632, 1)
+shader_parameter/rapid = 0.002
+shader_parameter/transparency = 0.999999977648
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yq6h"]
+material = SubResource("ShaderMaterial_wvdmf")
+size = Vector3(300, 8, 600)
+
+[node name="Beach" type="Node3D" unique_id=2010751982]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1807106599]
+environment = SubResource("Environment_tdq1v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788101121]
+transform = Transform3D(-0.013956262, 0.041415147, -0.9990446, 0.0004077906, 0.99914205, 0.04141349, 0.99990255, 0.00017057639, -0.013961174, 0, 0, 0)
+light_color = Color(0.89303803, 0.4710492, 3.85046e-07, 1)
+light_energy = 120.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 4.593
+light_angular_distance = 15.46
+light_specular = 16.0
+shadow_enabled = true
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=393288805]
+data_directory = "res://Terrain data/beach"
+material = SubResource("Terrain3DMaterial_43n2k")
+assets = SubResource("Terrain3DAssets_3t5gu")
+mesh_lods = 4
+mesh_size = 8
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="hight referance 2m" type="MeshInstance3D" parent="." unique_id=47137771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.142456, 2.212634, 0)
+mesh = SubResource("CapsuleMesh_5yq6h")
+
+[node name="Camera3D" type="Camera3D" parent="hight referance 2m" unique_id=1244258277]
+transform = Transform3D(-0.11139924, 0.09316892, 0.9893988, 0.0035416232, 0.99562645, -0.0933566, -0.99376947, -0.006895775, -0.111242, 0, 0.89668655, 0)
+
+[node name="simple water" type="MeshInstance3D" parent="." unique_id=1311018838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.39539, -4.459716, -25.167942)
+mesh = SubResource("BoxMesh_5yq6h")

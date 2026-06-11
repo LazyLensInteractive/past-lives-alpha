@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmlodfkrlngh6"]
+
+[ext_resource type="Texture2D" uid="uid://bmp4cjmef1dyq" path="res://materials/sand/sand_03_diff_2k.jpg" id="1_ekp3g"]
+[ext_resource type="Texture2D" uid="uid://dhxy3w1v6v73i" path="res://materials/sand/sand_03_nor_gl_2k.jpg" id="2_uuh5n"]
+
+[resource]
+albedo_texture = ExtResource("1_ekp3g")
+normal_enabled = true
+normal_texture = ExtResource("2_uuh5n")
