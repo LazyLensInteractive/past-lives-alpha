@@ -492,7 +492,7 @@ script = ExtResource("7_v86rl")
 
 [node name="HingeJoint3D" type="HingeJoint3D" parent="." unique_id=1368044612]
 transform = Transform3D(3.978466, -9.467604, -99.47131, -80.91878, -58.70792, 2.3513324, -58.620094, 80.397484, -9.996742, 0.19894324, 0.8046083, -1.3659878)
-node_a = NodePath("../portable_cassette_player_1k/StaticBody3D")
+node_a = NodePath("../RigidBody3D2")
 node_b = NodePath("StaticBody3D")
 exclude_nodes_from_collision = false
 angular_limit/enable = true
