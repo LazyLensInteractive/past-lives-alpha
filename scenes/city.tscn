@@ -33,7 +33,7 @@ adjustment_contrast = 1.25
 adjustment_saturation = 2.0
 
 [sub_resource type="Gradient" id="Gradient_movw8"]
-offsets = PackedFloat32Array(0.7487837, 0.99593, 1)
+offsets = PackedFloat32Array(0.4708084, 0.99593, 1)
 colors = PackedColorArray(0.41329563, 0.41790935, 0.85464126, 1, 0.042921968, 0.042921968, 0.042921968, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_drx7m"]
@@ -49,7 +49,7 @@ noise = SubResource("FastNoiseLite_bih7l")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oacpt"]
 render_priority = 0
 shader = ExtResource("1_bih7l")
-shader_parameter/window_scale = Vector2(22.434, 87.528)
+shader_parameter/window_scale = Vector2(35.797, 87.528)
 shader_parameter/neon_gradient = SubResource("GradientTexture1D_drx7m")
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_txhch")
 shader_parameter/noise_scale = 1.0

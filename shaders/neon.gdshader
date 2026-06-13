@@ -4,10 +4,10 @@ uniform vec2 window_scale = vec2(10.0, 70.0);
 uniform sampler2D neon_gradient : hint_default_black;
 uniform sampler2D noise_tex : hint_default_white, repeat_enable;
 uniform float noise_scale : hint_range(0.1, 5.0) = 1.0;
-uniform float movement_speed : hint_range(-2.0, 2.0) = 0.2;
-uniform float min_brightness : hint_range(1.0, 10.0) = 3.0;
-uniform float max_brightness : hint_range(1.0, 10.0) = 2.0;
-uniform float pulse_speed : hint_range(0.1, 5.0) = 1.0;
+uniform float movement_speed : hint_range(1.0, 1.0) = 0.01;
+uniform float min_brightness : hint_range(0, 0.5) = 0.5;
+uniform float max_brightness : hint_range(0, 1.0) = 1.0;
+uniform float pulse_speed : hint_range(0.1, 1.0) = 0.1;
 float rand(vec2 co) {
     return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453123);
 }

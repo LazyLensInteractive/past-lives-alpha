@@ -1,5 +1,5 @@
 extends Node3D
-
+@onready var camlock = $CamTextLock
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,13 +9,21 @@ func _ready() -> void:
 		get_viewport().use_xr = true
 	else:
 		print("OpenXR failed to initialize. Please check your headset connection.")
-
+	
+	
+	#text shit
+	datamanger.player_text_lock.connect(_on_text_lock)
+	datamanger.player_text_lock.emit(camlock)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass 
+	pass
 	
 	#if Input.is_action_just_pressed("ui_focus_next"):
 		#TextSystem.text_change("test")
 	#if Input.is_action_just_pressed("ui_accept"):
 		#TextSystem.step_text()
+
+func _on_text_lock(lock_node: Marker3D):
+	TextSystem.text_lock_location = lock_node
+	print(lock_node, TextSystem.text_lock_location)

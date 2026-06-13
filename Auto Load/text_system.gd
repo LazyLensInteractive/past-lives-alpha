@@ -1,6 +1,7 @@
 extends Node3D
 var text_location = null
 var current_text: Node3D
+var text_lock_location: Marker3D
 var text_data = {}
 var current_line = 0
 var current_option = ""

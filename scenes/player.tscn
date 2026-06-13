@@ -49,3 +49,5 @@ metadata/_custom_type_script = "uid://b18kkstg643yw"
 
 [node name="MovementCrouch" parent="XROrigin3D/XRController3D2" unique_id=125958068 instance=ExtResource("8_smehm")]
 crouch_height = 1.7
+
+[node name="CamTextLock" type="Marker3D" parent="." unique_id=1295291927]

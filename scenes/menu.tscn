@@ -508,8 +508,16 @@ shape = SubResource("BoxShape3D_oe7kc")
 [node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("8_13sgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.05024, -20.86576, -13.569389)
 
-[node name="text (setup)" parent="Table (after fall menu)" unique_id=820982622 instance=ExtResource("9_i6lef")]
+[node name="text (setup)" parent="Table (after fall menu)" unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55604744, 1.6079865, 0.43438244)
+dialogue_key = "guy_at_table"
+auto_start = null
+npc_head_marker = NodePath("../Marker3D")
+slide_speed = null
+look_threshold = null
+
+[node name="Marker3D" type="Marker3D" parent="Table (after fall menu)" unique_id=1189199840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6943283, 1.5991726, 1.195818)
 
 [node name="play game" type="Node3D" parent="." unique_id=1933289532 groups=["Discs"]]
 transform = Transform3D(0.13723294, -0.9905389, -4.3297824e-08, 0, -4.3711392e-08, 1, -0.9905389, -0.13723294, -5.998642e-09, 0.38006654, 0.8295847, -1.200747)

@@ -3,7 +3,6 @@ extends Node3D
 @export var dialogue_key: String = "war_guy" 
 @export var auto_start: bool = true
 @export var npc_head_marker: Marker3D
-@export var camera_edge_marker: Marker3D
 @export var slide_speed: float = 5.0
 @export var look_threshold: float = 0.7
 @export var typing_audio: AudioStreamPlayer3D
@@ -18,8 +17,10 @@ func _ready() -> void:
 		start_talking()
 
 func _process(delta: float) -> void:
-	if not npc_head_marker or not camera_edge_marker or not xr_camera:
-		return 
+	var camera_edge_marker = TextSystem.text_lock_location
+	#if not npc_head_marker or not camera_edge_marker or not xr_camera:
+		#print("something was not found open text.gd line 21... text system will not continue")
+		#return 
 	var direction_to_npc = xr_camera.global_position.direction_to(npc_head_marker.global_position)
 	var camera_forward = -xr_camera.global_transform.basis.z
 	var look_amount = camera_forward.dot(direction_to_npc)
@@ -28,6 +29,9 @@ func _process(delta: float) -> void:
 		goal_position = npc_head_marker.global_position
 		text_mesh.scale = Vector3(1, 1, 1)
 	else:
+		if camera_edge_marker == null:
+			print("camera edge null... retrying data issue may exist")
+			return
 		goal_position = camera_edge_marker.global_position
 		text_mesh.scale = Vector3(0.2, 0.2, 0.2)
 	global_position = global_position.lerp(goal_position, slide_speed * delta)
