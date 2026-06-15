@@ -15,7 +15,9 @@ func _ready() -> void:
 		print("No Camera Found")
 	if auto_start == true:
 		start_talking()
-
+	var text_mat = text_mesh.get_active_material(0)
+	var viewport = $TextViewport
+	text_mat.albedo_texture = viewport.get_texture()
 func _process(delta: float) -> void:
 	var camera_edge_marker = TextSystem.text_lock_location
 	#if not npc_head_marker or not camera_edge_marker or not xr_camera:

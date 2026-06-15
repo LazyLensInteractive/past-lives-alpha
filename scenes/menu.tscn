@@ -511,10 +511,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.05024, -20.86576, -13.569
 [node name="text (setup)" parent="Table (after fall menu)" unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55604744, 1.6079865, 0.43438244)
 dialogue_key = "guy_at_table"
-auto_start = null
 npc_head_marker = NodePath("../Marker3D")
-slide_speed = null
-look_threshold = null
 
 [node name="Marker3D" type="Marker3D" parent="Table (after fall menu)" unique_id=1189199840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6943283, 1.5991726, 1.195818)

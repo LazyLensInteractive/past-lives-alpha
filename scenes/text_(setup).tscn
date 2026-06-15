@@ -1,18 +1,11 @@
 [gd_scene format=3 uid="uid://6dv2fx1u8unl"]
 
 [ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://scripts/text.gd" id="1_0ojqq"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_0ojqq"]
-viewport_path = NodePath("TextViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtl24"]
-resource_local_to_scene = true
-transparency = 1
-shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_0ojqq")
+[ext_resource type="Material" uid="uid://cqy1oyrwskken" path="res://textSubView.tres" id="2_gw7q3"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_e2obq"]
-material = SubResource("StandardMaterial3D_qtl24")
+resource_local_to_scene = true
+material = ExtResource("2_gw7q3")
 
 [node name="text (setup)" type="Node3D" unique_id=820982622]
 script = ExtResource("1_0ojqq")

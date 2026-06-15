@@ -26,7 +26,7 @@ Randomness="*uid://bcds86eujfghv"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [global_group]
 
