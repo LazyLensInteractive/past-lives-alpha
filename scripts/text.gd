@@ -46,7 +46,6 @@ func _process(delta: float) -> void:
 			typing_audio.play()
 	else:
 		typing_audio.stop()
-
 func start_talking() -> void:
 	print("call")
 	TextSystem.current_text = self
