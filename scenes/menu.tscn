@@ -429,6 +429,11 @@ _data = {
 
 [node name="menu" type="Node3D" unique_id=2043559759]
 
+[node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 0.08277321)
+dialogue_key = "guy_at_table"
+npc_head_marker = NodePath("../Marker3D")
+
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1096144651 groups=["cassetee lid"]]
 collision_mask = 131073
 freeze = true
@@ -456,6 +461,7 @@ environment = SubResource("Environment_4hy44")
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
+visible = false
 
 [node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)
@@ -546,14 +552,6 @@ shape = SubResource("BoxShape3D_oe7kc")
 [node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("8_13sgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.05024, -20.86576, -13.569389)
 
-[node name="text (setup)" parent="Table (after fall menu)" unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55604744, 1.6079865, 0.43438244)
-dialogue_key = "guy_at_table"
-npc_head_marker = NodePath("../Marker3D")
-
-[node name="Marker3D" type="Marker3D" parent="Table (after fall menu)" unique_id=1189199840]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6943283, 1.5991726, 1.195818)
-
 [node name="play game" type="Node3D" parent="." unique_id=1933289532 groups=["Discs"]]
 transform = Transform3D(0.13723294, -0.9905389, -4.3297824e-08, 0, -4.3711392e-08, 1, -0.9905389, -0.13723294, -5.998642e-09, 0.38006654, 0.8295847, -1.200747)
 script = ExtResource("10_mj5lg")
@@ -626,6 +624,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.359049, -20.002878, -11.1
 
 [node name="Guy_animation" type="AnimationPlayer" parent="the guy" unique_id=135596513]
 libraries/ = SubResource("AnimationLibrary_7jp70")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1189199840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7287219, 1.369528, 0.8442087)
 
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
 [connection signal="cassette_in" from="Node3D/Area3D" to="play game" method="_on_area_3d_cassette_in"]

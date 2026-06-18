@@ -20,9 +20,6 @@ func _ready() -> void:
 	text_mat.albedo_texture = viewport.get_texture()
 func _process(delta: float) -> void:
 	var camera_edge_marker = TextSystem.text_lock_location
-	#if not npc_head_marker or not camera_edge_marker or not xr_camera:
-		#print("something was not found open text.gd line 21... text system will not continue")
-		#return 
 	var direction_to_npc = xr_camera.global_position.direction_to(npc_head_marker.global_position)
 	var camera_forward = -xr_camera.global_transform.basis.z
 	var look_amount = camera_forward.dot(direction_to_npc)

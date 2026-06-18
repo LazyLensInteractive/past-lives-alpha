@@ -10,7 +10,7 @@
       "Just dont let them reach us thats it"
 	],
 	"speed_min": 0.4,
-	"speed _max": 0.8,
+	"speed_max": 0.8,
 	"color": "#ff0000",
 	"shake": true
   },
@@ -27,7 +27,7 @@
   "guy_at_table":{
 	"speaker": "Someone You Should Know",
 	"lines": [
-		"Sit boy....",
+		"s^Sit boy..../s",
 		"Let me tell you a story.",
 		"It begins in a beautiful place. #(beach transition start)",
 		"One where the very tide would pull you in. #(freeze on beach wind noise, birds, sun, water, go back to table after a few seconds record scratch)",
@@ -42,8 +42,8 @@
 
 	],
 	"speed_min": 0.4,
-	"speed _max": 0.8,
-	"color": "#ff0000",
+	"speed_max": 0.8,
+	"color": "#ffffff",
 	"shake": true
 }
 }

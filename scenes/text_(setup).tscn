@@ -12,6 +12,7 @@ script = ExtResource("1_0ojqq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=51974682]
 mesh = SubResource("QuadMesh_e2obq")
+surface_material_override/0 = ExtResource("2_gw7q3")
 
 [node name="TextViewport" type="SubViewport" parent="." unique_id=99832513]
 transparent_bg = true
