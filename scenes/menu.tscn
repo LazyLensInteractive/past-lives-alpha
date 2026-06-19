@@ -451,7 +451,7 @@ shape = SubResource("BoxShape3D_2ux3d")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
 transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.49877846, -0.783098, 0.37145337, 0.034930464, 0.44638267, 0.8941602, 0, 0, 0)
 light_color = Color(0.6542321, 0.6542321, 0.654232, 1)
-light_energy = 8.875
+light_energy = 0.06
 light_indirect_energy = 3.963
 light_volumetric_fog_energy = 0.259
 sky_mode = 2
@@ -492,6 +492,15 @@ mesh = SubResource("ArrayMesh_nvy5m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1303484389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2581488, 0.3867584, -1.4035292)
 shape = SubResource("BoxShape3D_4ytvr")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="RigidBody3D" unique_id=73139635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14030394, 1.2090133, -1.464008)
+light_color = Color(1, 0.9019608, 0.6392157, 1)
+light_energy = 0.4
+distance_fade_enabled = true
+distance_fade_length = 0.0
+omni_range = 2.2232747
+omni_attenuation = 2.879
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1639338114]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.185313, -1.8732852)

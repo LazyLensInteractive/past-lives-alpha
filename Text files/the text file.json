@@ -27,22 +27,22 @@
   "guy_at_table":{
 	"speaker": "Someone You Should Know",
 	"lines": [
-		"s^Sit boy..../s",
+		"s^Sit boy..../s#>#",
 		"Let me tell you a story.",
-		"It begins in a beautiful place. #(beach transition start)",
-		"One where the very tide would pull you in. #(freeze on beach wind noise, birds, sun, water, go back to table after a few seconds record scratch)",
+		"This story begins in a beautiful place.... #(beach transition start)#",
+		"A place where the very tide would pull you in..... #(freeze on beach wind noise, birds, sun, water, go back to table after a few seconds record scratch)#",
 		"Scratch that terrible way to start...",
 		"This story starts in a city...",
-		"A city unlike anything you will find on this planet #(city transition here for short time before back to table)",
+		"A city unlike anything you will find on this planet #(city transition here for short time before back to table)#",
 		"Damn! #shake# why is it so hard to just start this! #deep breath#",
 		"Let's do this one more time... #(house transition)#",
 		"This is what I would call 'home' at least thats what it was...",
 		"#text size small# Up until the very thing that brought you here existed to the public...",
-		"#text becomes mostly clear as you 'load' into this world# I wish i still had the time to say goodbye..."
+		"#text becomes mostly clear as you 'load' into this world# I wish i still had the chance to say goodbye..."
 
 	],
-	"speed_min": 0.4,
-	"speed_max": 0.8,
+	"speed_min": 0.1,
+	"speed_max": 0.5,
 	"color": "#ffffff",
 	"shake": true
 }

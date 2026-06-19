@@ -6,10 +6,14 @@ extends Node3D
 @export var slide_speed: float = 5.0
 @export var look_threshold: float = 0.7
 @export var typing_audio: AudioStreamPlayer3D
+@export var auto_type = true
 var xr_camera: XRCamera3D
 @onready var text_mesh: MeshInstance3D = $MeshInstance3D
 
+
 func _ready() -> void:
+	TextSystem.text_data_commands.connect(text_data)
+	TextSystem.done_talking.connect(line_done)
 	xr_camera = get_viewport().get_camera_3d()
 	if xr_camera == null:
 		print("No Camera Found")
@@ -18,6 +22,7 @@ func _ready() -> void:
 	var text_mat = text_mesh.get_active_material(0)
 	var viewport = $TextViewport
 	text_mat.albedo_texture = viewport.get_texture()
+	
 func _process(delta: float) -> void:
 	var camera_edge_marker = TextSystem.text_lock_location
 	var direction_to_npc = xr_camera.global_position.direction_to(npc_head_marker.global_position)
@@ -43,6 +48,7 @@ func _process(delta: float) -> void:
 			typing_audio.play()
 	else:
 		typing_audio.stop()
+
 func start_talking() -> void:
 	print("call")
 	TextSystem.current_text = self
@@ -54,3 +60,12 @@ func _on_auto_text_timeout() -> void:
 		return
 	if TextSystem.current_text == self:
 		TextSystem.step_text()
+func text_data(command: String):
+	print(command)
+	if command == "#>#":
+		TextSystem.step_text()
+func line_done():
+	if auto_type == true:
+		TextSystem.step_text()
+	else:
+		print("wrong")

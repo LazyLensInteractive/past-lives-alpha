@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 
 func _on_falling_room_start_episode_0() -> void:
-	pass
+	guy_animation.play("Guy animation")
+	

@@ -9,7 +9,9 @@ var is_typing = false
 var typing_id = 0
 var min_type_speed: float
 var max_type_speed: float
-signal done_talking #only use this for timing and when you can change scenes
+var regex = RegEx.new()
+signal done_talking #currently used to tell when a line is finished
+signal text_data_commands(command: String)
 
 @export_file("*.json") var current_loaded_text: String = ""
 func text_load(Path: String):
@@ -38,13 +40,19 @@ func _ready() -> void:
 	pass
 	
 func text_display():
+	regex.compile("#([^#]+)#")
 	min_type_speed = text_data[current_option]["speed_min"]
 	max_type_speed = text_data[current_option]["speed_max"]
 	typing_id += 1
 	var local_id = typing_id
 	is_typing = true
 	var sentence = text_data[current_option]["lines"][current_line]
-	
+	#RegEx
+	var matches = regex.search_all(sentence)
+	for i in matches:
+		var RegData = i.get_string(0)
+		text_data_commands.emit(RegData)
+	sentence = regex.sub(sentence, "", true)
 	# bbcode stuffs
 	# colors and formatting
 	sentence = sentence.replace("b^", "[b]")
@@ -84,6 +92,8 @@ func text_display():
 		label.visible_characters += 1
 		var typing_variation = randf_range(min_type_speed, max_type_speed)
 		await get_tree().create_timer(typing_variation).timeout
+	print("typing done")
+	done_talking.emit()
 	is_typing = false
 func step_text():
 	if current_option == "":
@@ -95,4 +105,4 @@ func step_text():
 	else:
 		current_text.get_node("TextViewport/RichTextLabel").text = ""
 		current_option = ""
-		done_talking.emit(typing_id)
+		#done_talking.emit()
