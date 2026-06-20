@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="1_lti8b"]
 [ext_resource type="Texture2D" uid="uid://b1hx7ru6booh5" path="res://textures/nightstandtextured_0.png" id="3_g3eks"]
 [ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
+[ext_resource type="PackedScene" uid="uid://rh8s172ck4ff" path="res://orb of memory.tscn" id="5_6cdou"]
 [ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/falling_room.tscn" id="6_g3eks"]
 [ext_resource type="Script" uid="uid://dqxwxnirlt4ke" path="res://scripts/control_for_after_fall_game_start.gd" id="7_v86rl"]
 [ext_resource type="PackedScene" uid="uid://dh6v01pu4hfv4" path="res://scenes/table_(after_fall_menu).tscn" id="8_13sgg"]
@@ -226,6 +227,45 @@ shadow_mesh = SubResource("ArrayMesh_il7on")
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ytvr"]
 size = Vector3(0.3937378, 0.76878357, 0.40629578)
 
+[sub_resource type="Animation" id="Animation_ufwb2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.4]
+}
+
+[sub_resource type="Animation" id="Animation_7jp70"]
+resource_name = "light flicker"
+length = 10.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.5, 0.53333336, 1.147577, 1.5809104, 1.6160774, 1.647577, 1.6809103, 2.0360239, 2.0494108, 2.057782, 2.1160774, 2.1494107, 2.4693573, 2.4911153, 2.52052, 2.5360239, 2.557782, 2.5693572, 2.5911152, 2.6098125, 2.9059613, 2.9538534, 3.02052, 3.043146, 3.0538533, 3.0708978, 3.1098125, 3.1431458, 3.3316755, 3.3392947, 3.4059613, 3.4392946, 3.5042312, 3.5708978, 3.604231, 3.6833522, 3.765009, 3.794408, 3.8316755, 3.8650088, 4.1166854, 4.1833525, 4.216686, 4.2277412, 4.294408, 4.3277416, 4.4607434, 4.894077, 4.9234757, 4.9607434, 4.9940767, 5.0160227, 5.356809, 5.4234757, 5.449356, 5.456809, 5.5160227, 5.549356, 5.8674507, 5.959997, 6.300784, 6.3674507, 6.3933306, 6.400784, 6.459997, 6.4933305, 6.9595, 7.3667045, 7.392833, 7.4595, 7.492833, 7.800038, 7.8667045, 7.900038, 8.218133, 8.651466, 8.718133, 8.736394, 8.751467, 9.169727, 9.180616, 9.236394, 9.269728, 9.61395, 9.680616, 9.71395, 9.88397, 10.317304, 10.38397, 10.417304),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.0, 0.4, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.4, 0.0, 0.4, 0.4, 0.0, 0.4, 0.4, 0.4, 0.0, 0.4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxgkd"]
+_data = {
+&"RESET": SubResource("Animation_ufwb2"),
+&"light flicker": SubResource("Animation_7jp70")
+}
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_54rii"]
 size = Vector3(0.07362366, 0.010375977, 0.037338257)
 
@@ -429,9 +469,13 @@ _data = {
 
 [node name="menu" type="Node3D" unique_id=2043559759]
 
+[node name="orb" parent="." unique_id=1903561907 instance=ExtResource("5_6cdou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20124793, 0.99999994, 0.03382349)
+
 [node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 0.08277321)
 dialogue_key = "guy_at_table"
+auto_start = false
 npc_head_marker = NodePath("../Marker3D")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1096144651 groups=["cassetee lid"]]
@@ -497,10 +541,15 @@ shape = SubResource("BoxShape3D_4ytvr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14030394, 1.2090133, -1.464008)
 light_color = Color(1, 0.9019608, 0.6392157, 1)
 light_energy = 0.4
+light_indirect_energy = 0.0
 distance_fade_enabled = true
 distance_fade_length = 0.0
-omni_range = 2.2232747
-omni_attenuation = 2.879
+omni_range = 1.0
+omni_attenuation = 2.577
+
+[node name="Light Flicker" type="AnimationPlayer" parent="RigidBody3D/OmniLight3D" unique_id=54954618]
+libraries/ = SubResource("AnimationLibrary_mxgkd")
+autoplay = &"light flicker"
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1639338114]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.185313, -1.8732852)
@@ -640,4 +689,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7287219, 1.369528, 0.844208
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
 [connection signal="cassette_in" from="Node3D/Area3D" to="play game" method="_on_area_3d_cassette_in"]
 [connection signal="start_episode_0" from="falling room" to="control for after fall game start" method="_on_falling_room_start_episode_0" flags=6]
+[connection signal="text_start" from="control for after fall game start" to="text (setup)" method="_on_control_for_after_fall_game_start_text_start" flags=6]
 [connection signal="body_entered" from="lid detect" to="Node3D/Area3D" method="_on_lid_detect_body_entered"]

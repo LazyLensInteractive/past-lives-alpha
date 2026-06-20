@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 		typing_audio.stop()
 
 func start_talking() -> void:
-	print("call")
+	print("talking now")
 	TextSystem.current_text = self
 	TextSystem.text_change(dialogue_key)
 
@@ -69,3 +69,7 @@ func line_done():
 		TextSystem.step_text()
 	else:
 		print("wrong")
+
+
+func _on_control_for_after_fall_game_start_text_start() -> void:
+	start_talking()

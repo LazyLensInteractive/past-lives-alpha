@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://rh8s172ck4ff"]
+
+[ext_resource type="Script" uid="uid://cvv8osy5exlpg" path="res://orb.gd" id="1_sb2gi"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oe7kc"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yq6h"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_oe7kc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5yq6h"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_5yq6h")
+
+[node name="Node3D" type="Node3D" unique_id=1903561907]
+script = ExtResource("1_sb2gi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=575246426]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5yq6h")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2098391000]
+own_world_3d = true
+size = Vector2i(1928, 1080)
