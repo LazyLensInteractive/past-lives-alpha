@@ -98,7 +98,7 @@ cull_mode = 2
 albedo_texture = ExtResource("8_i6lef")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ux3d"]
-size = Vector3(0.10998535, 0.06199646, 0.0087890625)
+size = Vector3(0.10998535, 0.044670105, 0.0087890625)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouk20"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -470,7 +470,7 @@ _data = {
 [node name="menu" type="Node3D" unique_id=2043559759]
 
 [node name="orb" parent="." unique_id=1903561907 instance=ExtResource("5_6cdou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20124793, 0.99999994, 0.03382349)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20124793, 1.0216606, 0.03382349)
 
 [node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 0.08277321)
@@ -489,7 +489,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6cdou")
 surface_material_override/1 = SubResource("StandardMaterial3D_i42df")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=1769664610]
-transform = Transform3D(0.9949538, -0.07491321, -0.066745564, 0.021229863, 0.80735475, -0.58968425, 0.09806248, 0.58529156, 0.804871, 0.1967841, 0.84334743, -1.3475593)
+transform = Transform3D(0.9949538, -0.07491321, -0.066745564, 0.021229863, 0.80735475, -0.58968425, 0.09806248, 0.58529156, 0.804871, 0.1961351, 0.8503417, -1.3424889)
 shape = SubResource("BoxShape3D_2ux3d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=457900836]
@@ -505,7 +505,6 @@ environment = SubResource("Environment_4hy44")
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
-visible = false
 
 [node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)

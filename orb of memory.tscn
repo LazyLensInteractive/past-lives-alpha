@@ -10,18 +10,104 @@ resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
 albedo_texture = SubResource("ViewportTexture_oe7kc")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_5yq6h"]
+[sub_resource type="SphereMesh" id="SphereMesh_sibho"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_5yq6h")
+
+[sub_resource type="Curve" id="Curve_d3yoa"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.3782986, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_8irwq"]
+texture_mode = 1
+curve = SubResource("Curve_d3yoa")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oe7kc"]
+lifetime_randomness = 0.69
+particle_flag_align_y = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 2.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+alpha_curve = SubResource("CurveTexture_8irwq")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1vn86"]
+
+[sub_resource type="Gradient" id="Gradient_ynd1j"]
+offsets = PackedFloat32Array(0.31821105, 1)
+colors = PackedColorArray(0.42352942, 0.60784316, 1, 1, 0.7137255, 0.08235294, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_703nq"]
+seed = 3
+frequency = 0.0047
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_klvew"]
+noise = SubResource("FastNoiseLite_703nq")
+color_ramp = SubResource("Gradient_ynd1j")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8vbyo"]
+seed = 3
+frequency = 0.0047
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b5r47"]
+noise = SubResource("FastNoiseLite_8vbyo")
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtbcm"]
+transparency = 1
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("NoiseTexture2D_1vn86")
+metallic = 1.0
+emission_enabled = true
+emission = Color(0.5125542, 0.5125543, 0.5125542, 1)
+emission_texture = SubResource("NoiseTexture2D_klvew")
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_b5r47")
+rim_tint = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5yq6h"]
+material = SubResource("StandardMaterial3D_dtbcm")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.01
+radial_segments = 8
+rings = 2
 
 [node name="Node3D" type="Node3D" unique_id=1903561907]
 script = ExtResource("1_sb2gi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=575246426]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
-mesh = SubResource("PlaneMesh_5yq6h")
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0)
+mesh = SubResource("SphereMesh_sibho")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2098391000]
 own_world_3d = true
 size = Vector2i(1928, 1080)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=927862917]
+transform = Transform3D(1, 0, 0, 0, -1, -0.00022612512, 0, 0.00022612512, -1, 0, 0, 0.10763419)
+amount = 30
+speed_scale = 0.2
+fixed_fps = 120
+process_material = SubResource("ParticleProcessMaterial_oe7kc")
+draw_pass_1 = SubResource("CylinderMesh_5yq6h")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1747727707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9409308)

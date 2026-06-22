@@ -1,7 +1,6 @@
 extends Node3D
-@onready var camlock = $CamTextLock
+@onready var camlock = $"Player/XROrigin3D/XRCamera3D/CamTextLock"
 @onready var orb: Node3D = $"../orb"
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var xr_interface = XRServer.find_interface("OpenXR")
