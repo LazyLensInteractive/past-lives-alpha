@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="10_70i5f"]
 [ext_resource type="Script" uid="uid://csqna3gfl1t3l" path="res://scripts/disc.gd" id="10_mj5lg"]
 [ext_resource type="PackedScene" uid="uid://chhbnpuccqxxb" path="res://scenes/the_guy.tscn" id="12_ufwb2"]
+[ext_resource type="PackedScene" uid="uid://hbmcdi27or4q" path="res://scenes/door.tscn" id="14_i42df"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hocab"]
 resource_name = "portable_cassette_player"
@@ -471,6 +472,7 @@ _data = {
 
 [node name="orb" parent="." unique_id=1903561907 instance=ExtResource("5_6cdou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20124793, 1.0216606, 0.03382349)
+visible = false
 
 [node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 0.08277321)
@@ -505,6 +507,7 @@ environment = SubResource("Environment_4hy44")
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
+visible = false
 
 [node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)
@@ -684,6 +687,9 @@ libraries/ = SubResource("AnimationLibrary_7jp70")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1189199840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7287219, 1.369528, 0.8442087)
+
+[node name="door" parent="." unique_id=1840594278 instance=ExtResource("14_i42df")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07066074, 1.6168567, -11.358519)
 
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
 [connection signal="cassette_in" from="Node3D/Area3D" to="play game" method="_on_area_3d_cassette_in"]
