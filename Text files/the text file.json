@@ -41,8 +41,8 @@
 		"#text becomes mostly clear as you 'load' into this world# I wish i still had the chance to say goodbye..."
 
 	],
-	"speed_min": 0.1,
-	"speed_max": 0.5,
+	"speed_min": 0.01,
+	"speed_max": 0.3,
 	"color": "#ffffff",
 	"shake": true
 }

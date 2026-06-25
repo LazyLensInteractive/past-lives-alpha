@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfhwrt0v8dfjq"]
 
 [ext_resource type="Script" uid="uid://df6fdr7kfiak2" path="res://falling_room.gd" id="1_25j32"]
+[ext_resource type="PackedScene" uid="uid://dh6v01pu4hfv4" path="res://scenes/table_(after_fall_menu).tscn" id="2_67yvo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg4p6"]
 transparency = 1
@@ -28,7 +29,7 @@ stencil_compare = 2
 
 [sub_resource type="TextMesh" id="TextMesh_67yvo"]
 material = SubResource("StandardMaterial3D_25j32")
-text = "I Thought We were Soul Tied....."
+text = "What if I could start again?"
 font_size = 53
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_67yvo"]
@@ -47,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08959961, -5.514531, -20.20
 shape = SubResource("BoxShape3D_eg4p6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=164435779]
-transform = Transform3D(0.0020149462, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.0020149462, -4.7434683, 1.9363122, 1.5902305)
+transform = Transform3D(0.18799359, 0, 0.9821703, 0, 1, 0, -0.9821703, 0, 0.18799359, -4.018218, -0.014728546, 1.5902305)
 mesh = SubResource("TextMesh_67yvo")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1999790862]
@@ -56,5 +57,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5151815)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=457875293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5528564, -3.1329718, 0.09057617)
 shape = SubResource("BoxShape3D_67yvo")
+
+[node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("2_67yvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93106604, -5.0135274, -3.9107366)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

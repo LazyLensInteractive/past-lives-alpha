@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1hx7ru6booh5" path="res://textures/nightstandtextured_0.png" id="3_g3eks"]
 [ext_resource type="Script" uid="uid://bu6enrx0evy1a" path="res://scripts/area_3d.gd" id="5_4ytvr"]
 [ext_resource type="PackedScene" uid="uid://rh8s172ck4ff" path="res://orb of memory.tscn" id="5_6cdou"]
-[ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/falling_room.tscn" id="6_g3eks"]
 [ext_resource type="Script" uid="uid://dqxwxnirlt4ke" path="res://scripts/control_for_after_fall_game_start.gd" id="7_v86rl"]
-[ext_resource type="PackedScene" uid="uid://dh6v01pu4hfv4" path="res://scenes/table_(after_fall_menu).tscn" id="8_13sgg"]
 [ext_resource type="Texture2D" uid="uid://ctbibplhih8bd" path="res://models/Gameplay items/hyper interactions/cassette/textures/cassette albedo.jpg" id="8_i6lef"]
 [ext_resource type="ArrayMesh" uid="uid://bc5p77i483au6" path="res://models/binary/cassete_player_mesh(binary).res" id="8_mj5lg"]
 [ext_resource type="PackedScene" uid="uid://6dv2fx1u8unl" path="res://scenes/text_(setup).tscn" id="9_i6lef"]
@@ -475,9 +473,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20124793, 1.0216606, 0.033
 visible = false
 
 [node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("9_i6lef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 0.08277321)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51799965, 1.1046654, 1.8899784)
 dialogue_key = "guy_at_table"
-auto_start = false
 npc_head_marker = NodePath("../Marker3D")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1096144651 groups=["cassetee lid"]]
@@ -508,9 +505,6 @@ environment = SubResource("Environment_4hy44")
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("1_lti8b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
 visible = false
-
-[node name="Menu Text location" type="Marker3D" parent="." unique_id=978173621]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1320577, 2.320711, 17.667831)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1822233655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.549007, 0)
@@ -588,9 +582,6 @@ mesh = SubResource("PlaneMesh_4ytvr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="right side floor" unique_id=1130318089]
 shape = SubResource("ConcavePolygonShape3D_g3eks")
 
-[node name="falling room" parent="." unique_id=670085850 instance=ExtResource("6_g3eks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06292266, -15.435298, 0.00534606)
-
 [node name="control for after fall game start" type="Node" parent="." unique_id=596336022]
 script = ExtResource("7_v86rl")
 
@@ -608,9 +599,6 @@ angular_limit/lower = 0.38397244
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HingeJoint3D/StaticBody3D" unique_id=1110575779]
 transform = Transform3D(0.005863887, 0.008081774, 0.00054771843, -0.008094582, 0.005871765, 2.0441483e-05, -0.00030508672, -0.00045534442, 0.0099849645, -2.1555461e-05, 0.0003849091, -0.000143999)
 shape = SubResource("BoxShape3D_oe7kc")
-
-[node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("8_13sgg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.05024, -20.86576, -13.569389)
 
 [node name="play game" type="Node3D" parent="." unique_id=1933289532 groups=["Discs"]]
 transform = Transform3D(0.13723294, -0.9905389, -4.3297824e-08, 0, -4.3711392e-08, 1, -0.9905389, -0.13723294, -5.998642e-09, 0.38006654, 0.8295847, -1.200747)
@@ -686,13 +674,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.359049, -20.002878, -11.1
 libraries/ = SubResource("AnimationLibrary_7jp70")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1189199840]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7287219, 1.369528, 0.8442087)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7287219, 1.369528, 1.7787147)
 
 [node name="door" parent="." unique_id=1840594278 instance=ExtResource("14_i42df")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07066074, 1.6168567, -11.358519)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07066074, 1.0806125, -11.358519)
 
 [connection signal="body_entered" from="Node3D/Area3D" to="Node3D/Area3D" method="_on_body_entered"]
 [connection signal="cassette_in" from="Node3D/Area3D" to="play game" method="_on_area_3d_cassette_in"]
-[connection signal="start_episode_0" from="falling room" to="control for after fall game start" method="_on_falling_room_start_episode_0" flags=6]
 [connection signal="text_start" from="control for after fall game start" to="text (setup)" method="_on_control_for_after_fall_game_start_text_start" flags=6]
 [connection signal="body_entered" from="lid detect" to="Node3D/Area3D" method="_on_lid_detect_body_entered"]
