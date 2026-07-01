@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	TextSystem.text_load("res://Text files/the text file.json")
+	TextSystem.text_load("res://text system/Text files/the text file.json")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -2,61 +2,22 @@
 
 [ext_resource type="Script" uid="uid://yrnnx7em0885" path="res://scripts/startxr.gd" id="1_cyx1q"]
 [ext_resource type="PackedScene" uid="uid://xqyoluqxre4e" path="res://scenes/war_guy.tscn" id="2_lsrh3"]
-[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/player.tscn" id="3_chv2k"]
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/charecters/player/player.tscn" id="3_chv2k"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_8vnrj"]
-[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://scenes/gun2.tscn" id="5_qt0k1"]
+[ext_resource type="PackedScene" uid="uid://ddbsxcy71p60r" path="res://scenes/functinal items/working/player gun/gun2.tscn" id="5_qt0k1"]
 [ext_resource type="Texture2D" uid="uid://hbwwp4wjysq4" path="res://textures/dirt.png" id="6_lkifk"]
 [ext_resource type="Texture2D" uid="uid://dao57om11iuk2" path="res://textures/dirt rough.png" id="7_hx6ow"]
 [ext_resource type="Texture2D" uid="uid://kj575aqfgsns" path="res://textures/rock.png" id="8_65283"]
 [ext_resource type="Texture2D" uid="uid://bp44lwh7elmcs" path="res://textures/rock rough.png" id="9_gy1n2"]
-[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://scenes/shooting_target.tscn" id="10_7v75m"]
+[ext_resource type="PackedScene" uid="uid://dklrht8q0ladp" path="res://scenes/functinal items/working/target/shooting_target.tscn" id="10_7v75m"]
 [ext_resource type="PackedScene" uid="uid://0jalf3ryd6q7" path="res://scenes/the_unknown.tscn" id="11_w7o7m"]
 [ext_resource type="Environment" uid="uid://bciq6n2jomwx4" path="res://enviroment data/data/war.tres" id="12_vvdgt"]
 [ext_resource type="Script" uid="uid://bn6h4wjvq0v57" path="res://enviroment data/control scripts/world_environment.gd" id="13_w0ang"]
-[ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://scripts/text.gd" id="14_68q7g"]
+[ext_resource type="Script" uid="uid://dkow6fnkcb602" path="res://text system/text.gd" id="14_68q7g"]
 [ext_resource type="AudioStream" uid="uid://ui1upcr6yl8n" path="res://audio/virtualzero-keyboard-typing-fast-371229.mp3" id="15_7iet6"]
 [ext_resource type="Texture2D" uid="uid://b1hx7ru6booh5" path="res://textures/nightstandtextured_0.png" id="16_muaym"]
 
-[sub_resource type="Gradient" id="Gradient_qun86"]
-offsets = PackedFloat32Array(0.2, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_hf6xi"]
-noise_type = 2
-frequency = 0.03
-cellular_jitter = 3.0
-cellular_return_type = 0
-domain_warp_enabled = true
-domain_warp_type = 1
-domain_warp_amplitude = 50.0
-domain_warp_fractal_type = 2
-domain_warp_fractal_lacunarity = 1.5
-domain_warp_fractal_gain = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c1k86"]
-noise = SubResource("FastNoiseLite_hf6xi")
-color_ramp = SubResource("Gradient_qun86")
-seamless = true
-
 [sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_la81f"]
-_shader_parameters = {
-&"bias_distance": 512.0,
-&"blend_sharpness": 0.5,
-&"depth_blur": 0.0,
-&"enable_macro_variation": true,
-&"enable_projection": true,
-&"flat_terrain_normals": false,
-&"macro_variation1": Color(1, 1, 1, 1),
-&"macro_variation2": Color(1, 1, 1, 1),
-&"macro_variation_slope": 0.333,
-&"mipmap_bias": 1.0,
-&"noise1_angle": 0.0,
-&"noise1_offset": Vector2(0.5, 0.5),
-&"noise1_scale": 0.04,
-&"noise2_scale": 0.076,
-&"noise_texture": SubResource("NoiseTexture2D_c1k86"),
-&"projection_threshold": 0.8
-}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxn7r"]
 transparency = 4
@@ -266,11 +227,10 @@ camera_attributes = SubResource("CameraAttributesPractical_xxn7r")
 compositor = SubResource("Compositor_aukyf")
 script = ExtResource("13_w0ang")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1433677660 node_paths=PackedStringArray("npc_head_marker", "camera_edge_marker")]
+[node name="Node3D" type="Node3D" parent="." unique_id=1433677660 node_paths=PackedStringArray("npc_head_marker")]
 transform = Transform3D(0.2381266, 0, 0.97123414, 0, 1, 0, -0.97123414, 0, 0.2381266, 6.413929, 1.9811764, 4.6968417)
 script = ExtResource("14_68q7g")
 npc_head_marker = NodePath("../War_guy/WarGuy text location")
-camera_edge_marker = NodePath("../Player/text lock")
 
 [node name="Label3D" type="Label3D" parent="Node3D" unique_id=1359980652]
 

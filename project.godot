@@ -23,10 +23,15 @@ XRToolsRumbleManager="*uid://by853dk86g1qw"
 TextSystem="*uid://cxikvrlak1p3e"
 SceneSwich="*uid://bq2lvr5pitxxl"
 Randomness="*uid://bcds86eujfghv"
+CyclopsAutoload="*uid://4siqre3jhe80"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/godot-xr-tools/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 

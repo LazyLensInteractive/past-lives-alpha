@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cfhwrt0v8dfjq"]
+
+[ext_resource type="Script" uid="uid://df6fdr7kfiak2" path="res://falling_room.gd" id="1_3w6s2"]
+[ext_resource type="PackedScene" uid="uid://dh6v01pu4hfv4" path="res://scenes/main menu/sub scenes/on play/table_(after_fall_menu).tscn" id="2_sag1n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg4p6"]
+transparency = 1
+cull_mode = 1
+shading_mode = 0
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_25j32"]
+material = SubResource("StandardMaterial3D_eg4p6")
+size = Vector3(10, 10, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eg4p6"]
+size = Vector3(10.394043, 1, 59.585083)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25j32"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 2
+
+[sub_resource type="TextMesh" id="TextMesh_67yvo"]
+material = SubResource("StandardMaterial3D_25j32")
+text = "What if I could start again?"
+font_size = 53
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_67yvo"]
+size = Vector3(12.764893, 8.812225, 6.7231445)
+
+[node name="falling room" type="Node3D" unique_id=670085850]
+script = ExtResource("1_3w6s2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1823659833]
+mesh = SubResource("BoxMesh_25j32")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1906690679]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=379523872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08959961, -5.514531, -20.207458)
+shape = SubResource("BoxShape3D_eg4p6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=164435779]
+transform = Transform3D(0.18799359, 0, 0.9821703, 0, 1, 0, -0.9821703, 0, 0.18799359, -4.018218, -0.014728546, 1.5902305)
+mesh = SubResource("TextMesh_67yvo")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1999790862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5151815)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=457875293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5528564, -3.1329718, 0.09057617)
+shape = SubResource("BoxShape3D_67yvo")
+
+[node name="Table (after fall menu)" parent="." unique_id=2106957978 instance=ExtResource("2_sag1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93106604, -5.0135274, -3.9107366)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

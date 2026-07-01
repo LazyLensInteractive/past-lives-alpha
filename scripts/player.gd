@@ -1,5 +1,5 @@
 extends Node3D
-@onready var camlock = $"Player/XROrigin3D/XRCamera3D/CamTextLock"
+@onready var camlock = $"XROrigin3D/XRCamera3D/CamTextLock"
 @onready var orb: Node3D = $"../orb"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +14,7 @@ func _ready() -> void:
 	#text shit
 	datamanger.player_text_lock.connect(_on_text_lock)
 	datamanger.player_text_lock.emit(camlock)
-	orb.change_memory("res://scenes/beach.tscn")
+	orb.change_memory("res://scenes/memory scenes/beach.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

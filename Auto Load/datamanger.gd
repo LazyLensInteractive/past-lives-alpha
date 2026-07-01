@@ -1,13 +1,11 @@
 extends Node
 var player_dead = false
 var current_disc = null
+
 signal player_text_lock(lock_node: Marker3D)
+signal stencil_state_changed(new_state: bool)
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var stencil_state: bool = false:
+	set(value):
+		stencil_state = value
+		stencil_state_changed.emit(stencil_state)
