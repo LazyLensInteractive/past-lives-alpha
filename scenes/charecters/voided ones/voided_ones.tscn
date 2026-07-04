@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c5hovpqesvdmj"]
+
+[ext_resource type="Script" uid="uid://dph8gdu2hml5d" path="res://voided_ones.gd" id="1_ia5b6"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4j5t4"]
+height = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_flo22"]
+height = 0.2
+
+[node name="Voided ones" type="Node3D" unique_id=1617070760]
+script = ExtResource("1_ia5b6")
+
+[node name="shooting target" type="Node3D" parent="." unique_id=1422117074 groups=["Shootable"]]
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="shooting target" unique_id=190534845]
+collision_layer = 524288
+collision_mask = 524288
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="shooting target/AnimatableBody3D" unique_id=684548958]
+transform = Transform3D(1, 0, 0, 0, 0.10633351, -0.9943305, 0, 0.9943305, 0.10633351, 0, 0, 0)
+mesh = SubResource("CylinderMesh_4j5t4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shooting target/AnimatableBody3D" unique_id=1518245471]
+transform = Transform3D(1, 0, 0, 0, 0.10633351, -0.9943305, 0, 0.9943305, 0.10633351, 0, 0, 0)
+shape = SubResource("CylinderShape3D_flo22")
