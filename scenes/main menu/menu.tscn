@@ -505,7 +505,6 @@ environment = SubResource("Environment_4hy44")
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("4_itjvx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6892011, 4.3048267, 3.8410053)
-visible = false
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1822233655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.549007, 0)

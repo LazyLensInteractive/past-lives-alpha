@@ -2,16 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cfhwrt0v8dfjq" path="res://scenes/main menu/sub scenes/on play/falling_room.tscn" id="1_hpvv5"]
 [ext_resource type="Script" uid="uid://brdrxyld6cyg2" path="res://scenes/functinal items/working/door/door.gd" id="1_uvdjg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25j32"]
-render_priority = -1
-transparency = 1
-depth_draw_mode = 2
-stencil_mode = 3
-stencil_flags = 2
+[ext_resource type="Material" uid="uid://dl3mgo5f6y7u7" path="res://hidden_to_obj.tres" id="2_xnvyi"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5yq6h"]
-material = SubResource("StandardMaterial3D_25j32")
+material = ExtResource("2_xnvyi")
 size = Vector2(2.004, 2.634)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oe7kc"]

@@ -19,6 +19,7 @@ collision_mask = 524288
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="shooting target/AnimatableBody3D" unique_id=684548958]
 transform = Transform3D(1, 0, 0, 0, 0.10633351, -0.9943305, 0, 0.9943305, 0.10633351, 0, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_4j5t4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="shooting target/AnimatableBody3D" unique_id=1518245471]
