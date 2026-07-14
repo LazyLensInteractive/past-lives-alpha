@@ -1,6 +1,7 @@
 extends Node3D
+class_name TextScript
 #put the tscn into a scene choose the diolouge kee and make a marker for the npc marker for the player should already exist and audio for variation between 'voices'
-@export var dialogue_key: String = "war_guy" 
+@export var dialogue_key: String 
 @export var auto_start: bool = true
 @export var npc_head_marker: Marker3D
 @export var slide_speed: float = 5.0
@@ -73,3 +74,32 @@ func line_done():
 
 func _on_control_for_after_fall_game_start_text_start() -> void:
 	start_talking()
+func talk(sentence: String, min_speed: float, max_speed: float, bubble_color: Color):
+	# bbcode stuffs
+	# colors and formatting
+	sentence = sentence.replace("b^", "[b]")
+	sentence = sentence.replace("/b", "[/b]")
+	sentence = sentence.replace("i^", "[i]")
+	sentence = sentence.replace("/i", "[/i]")
+	sentence = sentence.replace("red^", "[color=#ff0000]")
+	sentence = sentence.replace("/red", "[/color]")
+	sentence = sentence.replace("grn^", "[color=#00ff00]")
+	sentence = sentence.replace("/grn", "[/color]")
+	sentence = sentence.replace("ylw^", "[color=#ffff00]")
+	sentence = sentence.replace("/ylw", "[/color]")
+	# effects
+	sentence = sentence.replace("w^", "[wave freq=5.0 amp=25.0]")
+	sentence = sentence.replace("/w", "[/wave]")
+	sentence = sentence.replace("t^", "[tornado radius=3.0 freq=5.0]")
+	sentence = sentence.replace("/t", "[/tornado]")
+	sentence = sentence.replace("f^", "[fade start=1 length=10]")
+	sentence = sentence.replace("/f", "[/f]")
+	sentence = sentence.replace("r^", "[rainbow freq=0.5 sat=1.0 val=1.0]")
+	sentence = sentence.replace("/r", "[/rainbow]")
+	sentence = sentence.replace("s^", "[shake]")
+	sentence = sentence.replace("/s", "[/shake]")
+	
+	var label = $TextViewport/RichTextLabel
+	var text_mesh = $MeshInstance3D
+	if not is_instance_valid(label):
+		return

@@ -9,7 +9,7 @@ material = ExtResource("2_xnvyi")
 size = Vector2(2.004, 2.634)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oe7kc"]
-size = Vector3(1, 1.0429688, 1)
+size = Vector3(9.39875, 27.559082, 2.6850586)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_la1wf"]
 albedo_color = Color(0.2910277, 0.29102772, 0.2910277, 1)
@@ -117,7 +117,7 @@ mesh = SubResource("PlaneMesh_5yq6h")
 [node name="change visibility" type="Area3D" parent="door inside" unique_id=263902081]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door inside/change visibility" unique_id=264700134]
-transform = Transform3D(1, 5.401671e-08, -7.566996e-10, 2.0861626e-07, 1.0000068, 1.0058284e-07, -1.4260877e-09, -2.3283064e-08, 1, 0.026791645, -0.33640164, 0.0030823946)
+transform = Transform3D(1, 9.126961e-08, -7.566996e-10, 2.0861626e-07, 1.0000099, 1.0058284e-07, -1.4260877e-09, -4.0978193e-08, 1, 1.1143348, -13.594573, -0.8394459)
 shape = SubResource("BoxShape3D_oe7kc")
 
 [node name="door half L" type="MeshInstance3D" parent="." unique_id=1980583549]

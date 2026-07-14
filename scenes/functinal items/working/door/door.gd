@@ -21,8 +21,8 @@ func _on_door_open_body_entered(body: Node3D) -> void:
 
 func _on_change_visibility_body_entered(body: Node3D) -> void:
 	if body is XRToolsPlayerBody:
-		datamanger.stencil_state = false
+		datamanger.stencil_state = true
 
 func _on_change_visibility_body_exited(body: Node3D) -> void:
 	if body is XRToolsPlayerBody:
-		datamanger.stencil_state = true
+		datamanger.stencil_state = false
