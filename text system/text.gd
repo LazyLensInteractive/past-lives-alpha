@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 			print("camera edge null... retrying data issue may exist")
 			return
 		goal_position = camera_edge_marker.global_position
-		text_mesh.scale = Vector3(0.2, 0.2, 0.2)
+		text_mesh.scale = Vector3(0.4, 0.4, 0.4)
 	global_position = global_position.lerp(goal_position, slide_speed * delta)
 	look_at(xr_camera.global_position, Vector3.UP)
 	rotate_object_local(Vector3.UP, PI)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c7pauvuaa0v4l"]
+
+[ext_resource type="Script" uid="uid://bia7jw70ql2bm" path="res://animation_trigger.gd" id="1_m6m1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5yq6h"]
+size = Vector3(2, 5, 1)
+
+[node name="animation trigger" type="Node3D" unique_id=1231006645]
+script = ExtResource("1_m6m1m")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=961700514]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=601977115]
+shape = SubResource("BoxShape3D_5yq6h")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -87,7 +87,7 @@ current = true
 current = true
 
 [node name="CamTextLock" type="Marker3D" parent="XROrigin3D/XRCamera3D" unique_id=1295291927]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37148535, 0.119408876, -0.5273092)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15062931, 0.119408876, -0.5273092)
 
 [node name="world control" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" unique_id=1546803541]
 transform = Transform3D(1, 0, 0, 0, 0.038436674, -0.999261, 0, 0.999261, 0.038436674, 0, 0, -0.60392714)

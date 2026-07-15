@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://de0gnod338qbm"]
+
+[ext_resource type="PackedScene" uid="uid://6dv2fx1u8unl" path="res://text system/text_(setup).tscn" id="1_j8ad1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5yq6h"]
+radius = 0.3
+height = 1.7
+
+[node name="mother" type="Node3D" unique_id=417670263]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=270208466]
+mesh = SubResource("CapsuleMesh_5yq6h")
+
+[node name="text (setup)" parent="." unique_id=820982622 node_paths=PackedStringArray("npc_head_marker") instance=ExtResource("1_j8ad1")]
+dialogue_key = "mom"
+auto_start = false
+npc_head_marker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=265716940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1011788, 0)
