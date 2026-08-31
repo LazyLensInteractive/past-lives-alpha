@@ -1,0 +1,615 @@
+[gd_scene format=3 uid="uid://b4drlsxl7mqff"]
+
+[ext_resource type="Script" uid="uid://bchix0jpv46lx" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_4ofox"]
+[ext_resource type="Script" uid="uid://c5jpx1aoa7iso" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_gmjmn"]
+[ext_resource type="Script" uid="uid://dekcd1o0m0k3r" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="3_d3n6x"]
+[ext_resource type="Script" uid="uid://dfd47cc554yqi" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="4_2ie2w"]
+[ext_resource type="Script" uid="uid://dmot4k5n7k0w6" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="5_m3tg1"]
+[ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/charecters/player/player.tscn" id="6_rq8xk"]
+
+[sub_resource type="Resource" id="Resource_r87fg"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_ay8wr"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_875gx"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_vsqnj"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(1, 1, 1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_u7lq2"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(-1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1)
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_mrtel"]
+script = ExtResource("4_2ie2w")
+data = PackedInt32Array(-1, -1, -1, -1, -1, -1)
+data_type = 1
+
+[sub_resource type="Resource" id="Resource_hkhuv"]
+script = ExtResource("4_2ie2w")
+data = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
+data_type = 1
+
+[sub_resource type="Resource" id="Resource_rb3k4"]
+script = ExtResource("4_2ie2w")
+data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+data_type = 1
+
+[sub_resource type="Resource" id="Resource_exi7b"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(-1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1)
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_ag7p4"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_sx0x7"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+data_type = 4
+stride = 4
+
+[sub_resource type="Resource" id="Resource_6hj4y"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(124, -3, -62, -3, -62, 0, 124, 0, 124, 0, -62, 0, -62, -3, 124, -3, 127, -62, 127, 124, -63, 124, -63, -62, 127, 0, 127, -3, -63, -3, -63, 0, 127, 124, 127, -62, -63, -62, -63, 124, 127, -3, 127, 0, -63, 0, -63, -3)
+data_type = 5
+stride = 2
+
+[sub_resource type="Resource" id="Resource_l1dsl"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(0, 3, 0, 0, 3, 186, 0, 0, 186, 0, 0, 0, 190, 3, 0, 190, 3, 186, 190, 0, 186, 190, 0, 0)
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_n445c"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(-0.015785454, 0.99974537, -0.016124927, -0.015785454, 0.99974537, 0.016124927, -0.015785454, -0.99974537, 0.016124927, -0.015785454, -0.99974537, -0.016124927, 0.015785454, 0.99974537, -0.016124927, 0.015785454, 0.99974537, 0.016124927, 0.015785454, -0.99974537, 0.016124927, 0.015785454, -0.99974537, -0.016124927)
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_p8nj7"]
+script = ExtResource("2_gmjmn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_yegxt"]
+script = ExtResource("5_m3tg1")
+num_vertices = 8
+num_edges = 12
+num_faces = 6
+num_face_vertices = 24
+active_vertex = -1
+active_edge = -1
+active_face = -1
+active_face_vertex = -1
+edge_vertex_indices = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 0, 7, 6, 6, 5, 5, 4, 4, 7, 0, 4, 5, 1, 6, 2, 7, 3)
+edge_face_indices = PackedInt32Array(0, 2, 0, 3, 0, 4, 0, 5, 1, 4, 1, 3, 1, 2, 1, 5, 2, 5, 2, 3, 3, 4, 4, 5)
+face_vertex_count = PackedInt32Array(4, 4, 4, 4, 4, 4)
+face_vertex_indices = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+vertex_data = {
+"normal": SubResource("Resource_n445c"),
+"position": SubResource("Resource_l1dsl"),
+"selected": SubResource("Resource_p8nj7")
+}
+edge_data = {
+"selected": SubResource("Resource_r87fg"),
+"uv_seam": SubResource("Resource_ay8wr")
+}
+face_data = {
+"material_index": SubResource("Resource_mrtel"),
+"normal": SubResource("Resource_u7lq2"),
+"selected": SubResource("Resource_875gx"),
+"visible": SubResource("Resource_vsqnj")
+}
+face_vertex_data = {
+"color": SubResource("Resource_sx0x7"),
+"face_index": SubResource("Resource_hkhuv"),
+"normal": SubResource("Resource_exi7b"),
+"selected": SubResource("Resource_ag7p4"),
+"uv0": SubResource("Resource_6hj4y"),
+"vertex_index": SubResource("Resource_rb3k4")
+}
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jyhqs"]
+rayleigh_color = Color(3.2247603e-06, 0.44573295, 0.5894553, 1)
+
+[sub_resource type="Sky" id="Sky_43n2k"]
+sky_material = SubResource("PhysicalSkyMaterial_jyhqs")
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_tdq1v"]
+background_mode = 2
+sky = SubResource("Sky_43n2k")
+tonemap_mode = 1
+tonemap_exposure = 0.44
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yq6h"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ofox"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gmjmn"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3n6x"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ie2w"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m3tg1"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rq8xk"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r87fg"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ay8wr"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_875gx"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vsqnj"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7lq2"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mrtel"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oe7kc"]
+size = Vector3(1.6593018, 0.2845703, 2.1883545)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hkhuv"]
+size = Vector3(1.6593018, 0.2845703, 2.1883545)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rb3k4"]
+size = Vector3(1.6593018, 0.2845703, 2.1883545)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ux3d"]
+size = Vector3(0.2, 0.8876953, 0.2)
+
+[node name="The playground" type="Node3D" unique_id=937959889]
+
+[node name="Player" parent="." unique_id=955110433 instance=ExtResource("6_rq8xk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.284626, 0)
+
+[node name="base world" type="Node" parent="." unique_id=1392281838]
+
+[node name="Block_0" type="Node3D" parent="base world" unique_id=1356560289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127, 0, -124)
+script = ExtResource("1_4ofox")
+mesh_vector_data = SubResource("Resource_yegxt")
+
+[node name="ENV" type="Node" parent="." unique_id=696370572]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="ENV" unique_id=295014455]
+environment = SubResource("Environment_tdq1v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="ENV" unique_id=1405997742]
+transform = Transform3D(-0.013956262, 0.041415147, -0.9990446, 0.0004077906, 0.99914205, 0.041413493, 0.99990255, 0.0001705765, -0.013961176, 0, 0, 0)
+light_color = Color(0.89303803, 0.4710492, 3.85046e-07, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 4.593
+light_angular_distance = 15.46
+light_specular = 0.3
+shadow_enabled = true
+
+[node name="Toys" type="Node" parent="." unique_id=1743670489]
+
+[node name="bars" type="Node" parent="Toys" unique_id=373767123]
+
+[node name="base" type="Node3D" parent="Toys/bars" unique_id=1124980435]
+
+[node name="polls" type="StaticBody3D" parent="Toys/bars/base" unique_id=1326472702]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=883886479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.287067, 4.853228, -0.19677734)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=223433086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.287067, 4.853228, -0.19677734)
+shape = SubResource("BoxShape3D_4ofox")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=1752092768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.287067, 4.853228, 1.4657569)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=768427843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.287067, 4.853228, 1.4657569)
+shape = SubResource("BoxShape3D_gmjmn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=1525520107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.599472, 4.853228, -0.19677734)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1717187957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.599472, 4.853228, -0.19677734)
+shape = SubResource("BoxShape3D_d3n6x")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=463717486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.599472, 4.853228, 1.4657569)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=541355272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.599472, 4.853228, 1.4657569)
+shape = SubResource("BoxShape3D_2ie2w")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=1025330799]
+transform = Transform3D(0.9238925, 0, 0.38265216, 0, 1, 0, -0.38265216, 0, 0.9238925, 20.264956, 4.853228, -1.1669961)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1176455407]
+transform = Transform3D(0.9238925, 0, 0.38265216, 0, 1, 0, -0.38265216, 0, 0.9238925, 20.264956, 4.853228, -1.1669961)
+shape = SubResource("BoxShape3D_m3tg1")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=52675684]
+transform = Transform3D(0.9238925, 0, 0.38265216, 0, 1, 0, -0.38265216, 0, 0.9238925, 20.901129, 4.853228, 0.36900675)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=2045140696]
+transform = Transform3D(0.9238925, 0, 0.38265216, 0, 1, 0, -0.38265216, 0, 0.9238925, 20.901129, 4.853228, 0.36900675)
+shape = SubResource("BoxShape3D_rq8xk")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=579208951]
+transform = Transform3D(0.65155786, 0, 0.7585989, 0, 1, 0, -0.7585989, 0, 0.65155786, 21.751276, 4.853228, -2.9674366)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1772426486]
+transform = Transform3D(0.65155786, 0, 0.7585989, 0, 1, 0, -0.7585989, 0, 0.65155786, 21.751276, 4.853228, -2.9674366)
+shape = SubResource("BoxShape3D_r87fg")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=348382688]
+transform = Transform3D(0.65155786, 0, 0.7585989, 0, 1, 0, -0.7585989, 0, 0.65155786, 23.012472, 4.853228, -1.8841999)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1552745690]
+transform = Transform3D(0.65155786, 0, 0.7585989, 0, 1, 0, -0.7585989, 0, 0.65155786, 23.012472, 4.853228, -1.8841999)
+shape = SubResource("BoxShape3D_ay8wr")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=1592796239]
+transform = Transform3D(0.16708487, 0, 0.98594266, 0, 1, 0, -0.98594266, 0, 0.16708487, 22.658659, 4.853228, -5.5947523)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=682122078]
+transform = Transform3D(0.16708487, 0, 0.98594266, 0, 1, 0, -0.98594266, 0, 0.16708487, 22.658659, 4.853228, -5.5947523)
+shape = SubResource("BoxShape3D_875gx")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=2039925114]
+transform = Transform3D(0.16708487, 0, 0.98594266, 0, 1, 0, -0.98594266, 0, 0.16708487, 24.297823, 4.853228, -5.316967)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1972602971]
+transform = Transform3D(0.16708487, 0, 0.98594266, 0, 1, 0, -0.98594266, 0, 0.16708487, 24.297823, 4.853228, -5.316967)
+shape = SubResource("BoxShape3D_vsqnj")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=1213724611]
+transform = Transform3D(0.08920914, 0, 0.9960129, 0, 1, 0, -0.9960129, 0, 0.08920914, 23.565235, 4.853228, -10.226233)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1902983494]
+transform = Transform3D(0.08920914, 0, 0.9960129, 0, 1, 0, -0.9960129, 0, 0.08920914, 23.565235, 4.853228, -10.226233)
+shape = SubResource("BoxShape3D_u7lq2")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Toys/bars/base/polls" unique_id=409512026]
+transform = Transform3D(0.08920914, 0, 0.9960129, 0, 1, 0, -0.9960129, 0, 0.08920914, 25.221142, 4.853228, -10.077919)
+mesh = SubResource("BoxMesh_5yq6h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toys/bars/base/polls" unique_id=1553238089]
+transform = Transform3D(0.08920914, 0, 0.9960129, 0, 1, 0, -0.9960129, 0, 0.08920914, 25.221142, 4.853228, -10.077919)
+shape = SubResource("BoxShape3D_mrtel")
+
+[node name="floor" type="StaticBody3D" parent="Toys/bars/base" unique_id=73763100]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Toys/bars/base/floor" unique_id=118737375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3419166, 3.0960286, 0.59417725)
+mesh = SubResource("BoxMesh_oe7kc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Toys/bars/base/floor" unique_id=807729940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3419166, 3.0960286, 0.59417725)
+shape = SubResource("BoxShape3D_hkhuv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toys/bars/base/floor" unique_id=406183033]
+transform = Transform3D(-0.09625258, 0, -0.995357, 0, 1, 0, 0.995357, 0, -0.09625258, 24.679049, 3.0960286, -10.963131)
+mesh = SubResource("BoxMesh_oe7kc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toys/bars/base/floor" unique_id=881890024]
+transform = Transform3D(-0.09625258, 0, -0.995357, 0, 1, 0, 0.995357, 0, -0.09625258, 24.679049, 3.0960286, -10.963131)
+shape = SubResource("BoxShape3D_rb3k4")
+
+[node name="bars" type="Node3D" parent="Toys/bars" unique_id=128037368]
+
+[node name="support bars" type="Node" parent="Toys/bars/bars" unique_id=539188847]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=199605701]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 7.809716, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1790710501]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 8.679763, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=423849030]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 9.518131, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1485404499]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 10.386567, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=493677224]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 11.2487335, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1635976493]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 12.123167, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1898061962]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 13.005543, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1923308282]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 13.888083, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1114480862]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 14.7589, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2106811900]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 15.251366, 6.730062, -0.18092823)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1469545994]
+transform = Transform3D(-0.00020578752, -0.9936134, 0.11283788, 1, -0.00020711025, 0, 2.3369881e-05, 0.11283788, 0.9936134, 16.13065, 6.730062, -0.1965549)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1947995436]
+transform = Transform3D(-0.00020578752, -0.9936134, 0.11283788, 1, -0.00020711025, 0, 2.3369881e-05, 0.11283788, 0.9936134, 16.345959, 6.730062, -0.22200668)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1597948250]
+transform = Transform3D(-0.00020492401, -0.98944426, 0.14491378, 0.99999994, -0.00020711024, -3.6147446e-12, 3.0013118e-05, 0.14491375, 0.98944426, 17.065887, 6.730062, -0.31474555)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=845576561]
+transform = Transform3D(-0.00019575353, -0.94516593, 0.3265905, 0.99999994, -0.00020711024, -3.6147446e-12, 6.764023e-05, 0.32659048, 0.94516593, 19.767962, 6.730062, -0.9955733)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2136064273]
+transform = Transform3D(-0.0001718437, -0.8297209, 0.55817866, 0.99999994, -0.00020711025, -6.995021e-13, 0.000115604504, 0.55817866, 0.8297209, 20.515625, 6.730062, -1.3378764)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=725294672]
+transform = Transform3D(-0.00014569866, -0.70348364, 0.7107116, 0.99999994, -0.00020711024, -3.4845581e-12, 0.00014719565, 0.7107116, 0.70348364, 20.98404, 6.730062, -1.7252201)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1018800283]
+transform = Transform3D(-0.00011035456, -0.53283006, 0.84622234, 0.99999994, -0.0002071102, -1.414859e-11, 0.0001752613, 0.8462222, 0.53283, 21.416426, 6.730062, -2.2837155)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=502755622]
+transform = Transform3D(-0.00010535152, -0.50867367, 0.8609595, 0.99999994, -0.0002071102, -8.229328e-12, 0.00017831351, 0.86095935, 0.50867355, 21.57857, 6.730062, -2.6440346)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=36928872]
+transform = Transform3D(-8.523351e-05, -0.41153693, 0.91139317, 0.99999994, -0.0002071102, -8.229328e-12, 0.00018875883, 0.91139305, 0.41153684, 21.956905, 6.730062, -3.3556657)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=953927345]
+transform = Transform3D(-8.523351e-05, -0.41153693, 0.91139317, 0.99999994, -0.0002071102, -8.229328e-12, 0.00018875883, 0.91139305, 0.41153684, 22.326233, 6.730062, -4.0943217)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2007556799]
+transform = Transform3D(-4.1689436e-05, -0.20129108, 0.9795316, 0.99999994, -0.0002071102, -8.99535e-12, 0.00020287096, 0.97953147, 0.20129097, 22.569448, 6.730062, -4.8149605)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1051681057]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 22.641512, 6.730062, -5.202304)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=864421610]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 22.79465, 6.730062, -6.049055)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1009846316]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 22.902744, 6.730062, -6.805726)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1995311315]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 23.046873, 6.730062, -7.6434693)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D65" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=983851441]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 23.154968, 6.730062, -8.463196)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D66" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1238843233]
+transform = Transform3D(-2.863353e-05, -0.13825265, 0.9903971, 0.99999994, -0.00020711022, -1.7356352e-11, 0.00020512131, 0.990397, 0.1382525, 23.263063, 6.730062, -9.120777)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D67" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2276036]
+transform = Transform3D(-8.183399e-05, -0.39512298, 0.91862833, 0.99999994, -0.00020711022, -2.030053e-11, 0.00019025725, 0.9186282, 0.3951229, 23.434214, 6.730062, -9.8234005)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=510070683]
+transform = Transform3D(-0.00019556274, -0.9442449, 0.32924423, 0.99999994, -0.0002071102, -8.274025e-12, 6.8189824e-05, 0.32924417, 0.94424486, 18.919737, 6.730062, -0.6747173)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=389044853]
+transform = Transform3D(-0.00019556274, -0.9442449, 0.32924423, 0.99999994, -0.0002071102, -8.274025e-12, 6.8189824e-05, 0.32924417, 0.94424486, 18.999348, 6.730062, -0.7395588)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2082936614]
+transform = Transform3D(-0.00020386546, -0.9843334, 0.17631792, 0.99999994, -0.0002071102, -8.373868e-12, 3.6517235e-05, 0.17631786, 0.9843334, 18.000523, 6.730062, -0.4262045)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1512454763]
+transform = Transform3D(-0.00020386546, -0.9843334, 0.17631792, 0.99999994, -0.0002071102, -8.373868e-12, 3.6517235e-05, 0.17631786, 0.9843334, 17.908651, 6.730062, -0.4262045)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1926061195]
+transform = Transform3D(-0.00020386546, -0.9843334, 0.17631792, 0.99999994, -0.0002071102, -8.373868e-12, 3.6517235e-05, 0.17631786, 0.9843334, 18.146942, 6.730062, -0.47930187)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1792307161]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 7.809716, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1024286321]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 8.679763, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1471685080]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 9.518131, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1178101656]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 10.386567, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1577578704]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 11.2487335, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=280095611]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 12.123167, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1322315189]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 13.005543, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1262771795]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 13.888083, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=213766719]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 14.7589, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=887271057]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 15.251366, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=560678534]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 16.08927, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=174340688]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 16.909018, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=257499481]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 17.739485, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1106777019]
+transform = Transform3D(-0.00020711025, -1, 0, 1, -0.00020711025, 0, 0, 0, 1, 18.588749, 6.730062, 1.4585729)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=703822617]
+transform = Transform3D(-0.00019255102, -0.9297029, 0.3683104, 1, -0.00020711025, -3.5302896e-12, 7.628086e-05, 0.3683104, 0.9297029, 19.300995, 6.730062, 1.2854004)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1933504282]
+transform = Transform3D(-0.0001736046, -0.838223, 0.5453276, 0.99999994, -0.0002071102, -1.7464877e-11, 0.000112942944, 0.5453275, 0.83822286, 20.555466, 6.730062, 0.61723113)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=68840085]
+transform = Transform3D(-0.00017543326, -0.8470525, 0.5315093, 0.99999994, -0.00020711022, -2.5802919e-11, 0.00011008102, 0.5315093, 0.8470524, 21.32093, 6.730062, 0.1609366)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1036322046]
+transform = Transform3D(-0.00016396653, -0.7916871, 0.61092687, 0.99999994, -0.00020711022, -2.5802919e-11, 0.00012652921, 0.6109268, 0.79168695, 21.762218, 6.730062, -0.14376426)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=94429490]
+transform = Transform3D(-0.00014885602, -0.7187284, 0.6952909, 0.99999994, -0.00020711024, -2.2304963e-11, 0.00014400188, 0.6952909, 0.71872836, 22.382128, 6.730062, -0.67961675)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1743522889]
+transform = Transform3D(-9.3463284e-05, -0.45127314, 0.89238596, 0.99999994, -0.00020711024, -2.91824e-11, 0.00018482226, 0.8923859, 0.45127302, 22.73936, 6.730062, -1.1419214)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1626407835]
+transform = Transform3D(-7.85324e-05, -0.3791817, 0.92532223, 0.99999994, -0.00020711024, -2.91824e-11, 0.00019164372, 0.9253222, 0.3791816, 22.865444, 6.730062, -1.4571288)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=763040062]
+transform = Transform3D(-7.587595e-05, -0.36635554, 0.9304751, 0.99999994, -0.00020711024, -1.3608484e-11, 0.00019271091, 0.93047506, 0.36635545, 23.201664, 6.730062, -2.3186965)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=739077384]
+transform = Transform3D(-7.587595e-05, -0.36635554, 0.9304751, 0.99999994, -0.00020711024, -1.3608484e-11, 0.00019271091, 0.93047506, 0.36635545, 23.495855, 6.730062, -3.0751948)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=2047615857]
+transform = Transform3D(-7.587595e-05, -0.36635554, 0.9304751, 0.99999994, -0.00020711024, -1.3608484e-11, 0.00019271091, 0.93047506, 0.36635545, 23.811064, 6.730062, -3.8737204)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=457558600]
+transform = Transform3D(-7.587595e-05, -0.36635554, 0.9304751, 0.99999994, -0.00020711024, -1.3608484e-11, 0.00019271091, 0.93047506, 0.36635545, 24.136778, 6.730062, -4.640725)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=983762179]
+transform = Transform3D(-5.9368256e-05, -0.28665063, 0.95803535, 0.99999994, -0.00020711022, -8.345599e-12, 0.00019841891, 0.9580353, 0.28665057, 24.220835, 6.730062, -4.9349184)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=327557058]
+transform = Transform3D(-5.9368256e-05, -0.28665063, 0.95803535, 0.99999994, -0.00020711022, -8.345599e-12, 0.00019841891, 0.9580353, 0.28665057, 24.455044, 6.730062, -5.7996855)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1346016643]
+transform = Transform3D(-3.4191187e-05, -0.165087, 0.98627913, 0.99999994, -0.00020711022, -9.720574e-12, 0.00020426848, 0.9862791, 0.16508693, 24.644213, 6.730062, -6.6104045)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=660815094]
+transform = Transform3D(-3.4191187e-05, -0.165087, 0.98627913, 0.99999994, -0.00020711022, -9.720574e-12, 0.00020426848, 0.9862791, 0.16508693, 24.770323, 6.730062, -7.457155)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1613641721]
+transform = Transform3D(-3.4191187e-05, -0.165087, 0.98627913, 0.99999994, -0.00020711022, -9.720574e-12, 0.00020426848, 0.9862791, 0.16508693, 24.905443, 6.730062, -8.222834)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=104527949]
+transform = Transform3D(-3.4191187e-05, -0.165087, 0.98627913, 0.99999994, -0.00020711022, -9.720574e-12, 0.00020426848, 0.9862791, 0.16508693, 25.076593, 6.730062, -9.078592)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=76400771]
+transform = Transform3D(-3.4191187e-05, -0.165087, 0.98627913, 0.99999994, -0.00020711022, -9.720574e-12, 0.00020426848, 0.9862791, 0.16508693, 25.157667, 6.730062, -9.619071)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1420464837]
+transform = Transform3D(-0.00018436894, -0.8901971, 0.4555758, 0.99999994, -0.00020711022, -1.9454728e-11, 9.4354415e-05, 0.45557576, 0.890197, 19.209455, 6.730062, 1.3903217)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1521572282]
+transform = Transform3D(-0.00018436894, -0.8901971, 0.4555758, 0.99999994, -0.00020711022, -1.9454728e-11, 9.4354415e-05, 0.45557576, 0.890197, 19.98414, 6.730062, 0.97675085)
+mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="structures" type="Node" parent="." unique_id=510167287]
+
+[node name="outside world" type="Node" parent="." unique_id=683827643]
+
+[node name="Dev Tools" type="Node" parent="." unique_id=1729534608 groups=["Dev Tools"]]

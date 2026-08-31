@@ -58,10 +58,11 @@
   "mom": {
 	"speaker": "Mom",
 	"lines": [
-      "Hey there sweetie!"
+	  "Hey there sweetie!",
+      "Food is almost ready I'll be bringing it now!"
 	],
-	"speed_min": 0.4,
-	"speed_max": 0.8,
+	"speed_min": 0.01,
+	"speed_max": 0.3,
 	"color": "#ffffff",
 	"shake": false
   }

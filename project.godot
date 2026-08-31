@@ -39,6 +39,7 @@ Shootable="This variant npcs can target as well"
 Player="Only put the player here"
 Discs="the data discs in the main menu"
 xr_hands="well its your hands mostly used to call drop from anywhere"
+"Dev Tools"="Dev Tools hidden in normal gameplay unless dev action preformed"
 
 [layer_names]
 
