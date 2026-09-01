@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfaysyspcwx0y"]
+
+[ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="1_1b440"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oe7kc"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yq6h"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="rock" unique_id=1954767027 instance=ExtResource("1_1b440")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_oe7kc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=2028160585]
+mesh = SubResource("BoxMesh_5yq6h")

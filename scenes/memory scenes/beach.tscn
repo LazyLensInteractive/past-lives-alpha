@@ -16,9 +16,6 @@ background_mode = 2
 sky = SubResource("Sky_43n2k")
 tonemap_mode = 1
 tonemap_exposure = 0.44
-ssao_enabled = true
-sdfgi_enabled = true
-glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_wvdmf"]
 offsets = PackedFloat32Array(0.2, 1)

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dfd47cc554yqi" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="4_2ie2w"]
 [ext_resource type="Script" uid="uid://dmot4k5n7k0w6" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="5_m3tg1"]
 [ext_resource type="PackedScene" uid="uid://8nugkc7dt21f" path="res://scenes/charecters/player/player.tscn" id="6_rq8xk"]
+[ext_resource type="PackedScene" uid="uid://dfaysyspcwx0y" path="res://models/Gameplay items/rock climb.tscn" id="7_gmjmn"]
 
 [sub_resource type="Resource" id="Resource_r87fg"]
 script = ExtResource("2_gmjmn")
@@ -15,6 +16,17 @@ data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 script = ExtResource("2_gmjmn")
 data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
+[sub_resource type="Resource" id="Resource_mrtel"]
+script = ExtResource("4_2ie2w")
+data = PackedInt32Array(-1, -1, -1, -1, -1, -1)
+data_type = 1
+
+[sub_resource type="Resource" id="Resource_u7lq2"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(-1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1)
+data_type = 6
+stride = 3
+
 [sub_resource type="Resource" id="Resource_875gx"]
 script = ExtResource("2_gmjmn")
 data = PackedByteArray(0, 0, 0, 0, 0, 0)
@@ -23,25 +35,15 @@ data = PackedByteArray(0, 0, 0, 0, 0, 0)
 script = ExtResource("2_gmjmn")
 data = PackedByteArray(1, 1, 1, 1, 1, 1)
 
-[sub_resource type="Resource" id="Resource_u7lq2"]
+[sub_resource type="Resource" id="Resource_sx0x7"]
 script = ExtResource("3_d3n6x")
-data = PackedFloat32Array(-1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1)
-data_type = 6
-stride = 3
-
-[sub_resource type="Resource" id="Resource_mrtel"]
-script = ExtResource("4_2ie2w")
-data = PackedInt32Array(-1, -1, -1, -1, -1, -1)
-data_type = 1
+data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+data_type = 4
+stride = 4
 
 [sub_resource type="Resource" id="Resource_hkhuv"]
 script = ExtResource("4_2ie2w")
 data = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
-data_type = 1
-
-[sub_resource type="Resource" id="Resource_rb3k4"]
-script = ExtResource("4_2ie2w")
-data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
 data_type = 1
 
 [sub_resource type="Resource" id="Resource_exi7b"]
@@ -54,27 +56,26 @@ stride = 3
 script = ExtResource("2_gmjmn")
 data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-[sub_resource type="Resource" id="Resource_sx0x7"]
-script = ExtResource("3_d3n6x")
-data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
-data_type = 4
-stride = 4
-
 [sub_resource type="Resource" id="Resource_6hj4y"]
 script = ExtResource("3_d3n6x")
 data = PackedFloat32Array(124, -3, -62, -3, -62, 0, 124, 0, 124, 0, -62, 0, -62, -3, 124, -3, 127, -62, 127, 124, -63, 124, -63, -62, 127, 0, 127, -3, -63, -3, -63, 0, 127, 124, 127, -62, -63, -62, -63, 124, 127, -3, 127, 0, -63, 0, -63, -3)
 data_type = 5
 stride = 2
 
-[sub_resource type="Resource" id="Resource_l1dsl"]
-script = ExtResource("3_d3n6x")
-data = PackedFloat32Array(0, 3, 0, 0, 3, 186, 0, 0, 186, 0, 0, 0, 190, 3, 0, 190, 3, 186, 190, 0, 186, 190, 0, 0)
-data_type = 6
-stride = 3
+[sub_resource type="Resource" id="Resource_rb3k4"]
+script = ExtResource("4_2ie2w")
+data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+data_type = 1
 
 [sub_resource type="Resource" id="Resource_n445c"]
 script = ExtResource("3_d3n6x")
 data = PackedFloat32Array(-0.015785454, 0.99974537, -0.016124927, -0.015785454, 0.99974537, 0.016124927, -0.015785454, -0.99974537, 0.016124927, -0.015785454, -0.99974537, -0.016124927, 0.015785454, 0.99974537, -0.016124927, 0.015785454, 0.99974537, 0.016124927, 0.015785454, -0.99974537, 0.016124927, 0.015785454, -0.99974537, -0.016124927)
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_l1dsl"]
+script = ExtResource("3_d3n6x")
+data = PackedFloat32Array(0, 3, 0, 0, 3, 186, 0, 0, 186, 0, 0, 0, 190, 3, 0, 190, 3, 186, 190, 0, 186, 190, 0, 0)
 data_type = 6
 stride = 3
 
@@ -187,6 +188,27 @@ size = Vector3(1.6593018, 0.2845703, 2.1883545)
 [sub_resource type="BoxMesh" id="BoxMesh_2ux3d"]
 size = Vector3(0.2, 0.8876953, 0.2)
 
+[sub_resource type="BoxMesh" id="BoxMesh_fqksc"]
+size = Vector3(9.7960205, 12.088364, 2.0942383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exi7b"]
+size = Vector3(9.7960205, 12.088364, 2.0942383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ag7p4"]
+size = Vector3(9.7960205, 12.088364, 2.0942383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sx0x7"]
+size = Vector3(9.7960205, 12.088364, 2.0942383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6hj4y"]
+size = Vector3(9.7960205, 12.088364, 2.0942383)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aywlg"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l1dsl"]
+size = Vector3(20, 1, 20)
+
 [node name="The playground" type="Node3D" unique_id=937959889]
 
 [node name="Player" parent="." unique_id=955110433 instance=ExtResource("6_rq8xk")]
@@ -205,7 +227,7 @@ mesh_vector_data = SubResource("Resource_yegxt")
 environment = SubResource("Environment_tdq1v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="ENV" unique_id=1405997742]
-transform = Transform3D(-0.013956262, 0.041415147, -0.9990446, 0.0004077906, 0.99914205, 0.041413493, 0.99990255, 0.0001705765, -0.013961176, 0, 0, 0)
+transform = Transform3D(-0.012985974, 0.378695, -0.92543054, 0.005129165, 0.9255217, 0.37866032, 0.9999027, 0.00017058651, -0.013961187, 0, 0, 0)
 light_color = Color(0.89303803, 0.4710492, 3.85046e-07, 1)
 light_energy = 16.0
 light_indirect_energy = 0.0
@@ -607,6 +629,156 @@ mesh = SubResource("BoxMesh_2ux3d")
 [node name="MeshInstance3D37" type="MeshInstance3D" parent="Toys/bars/bars/support bars" unique_id=1521572282]
 transform = Transform3D(-0.00018436894, -0.8901971, 0.4555758, 0.99999994, -0.00020711022, -1.9454728e-11, 9.4354415e-05, 0.45557576, 0.890197, 19.98414, 6.730062, 0.97675085)
 mesh = SubResource("BoxMesh_2ux3d")
+
+[node name="climbing wall" type="Node" parent="Toys" unique_id=1924753637]
+
+[node name="base" type="StaticBody3D" parent="Toys/climbing wall" unique_id=1095375027]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Toys/climbing wall/base" unique_id=1182273563]
+transform = Transform3D(1, 0, 0, 0, 0.9983806, 0.056887504, 0, -0.056887504, 0.9983806, 20.078737, 9.19268, -33.880272)
+mesh = SubResource("BoxMesh_fqksc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Toys/climbing wall/base" unique_id=509024014]
+transform = Transform3D(1, 0, 0, 0, 0.9983806, 0.056887504, 0, -0.056887504, 0.9983806, 20.078737, 9.19268, -33.880272)
+shape = SubResource("BoxShape3D_exi7b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Toys/climbing wall/base" unique_id=985261546]
+transform = Transform3D(-0.049798932, -0.99870366, 0.01054614, 0.99868846, -0.04966697, 0.012425187, -0.0118852835, 0.011151066, 0.999867, 14.553492, 17.901562, -34.132156)
+mesh = SubResource("BoxMesh_fqksc")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Toys/climbing wall/base" unique_id=209959358]
+transform = Transform3D(-0.049798932, -0.99870366, 0.01054614, 0.99868846, -0.04966697, 0.012425187, -0.0118852835, 0.011151066, 0.999867, 14.553492, 17.901562, -34.132156)
+shape = SubResource("BoxShape3D_ag7p4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Toys/climbing wall/base" unique_id=1027088312]
+transform = Transform3D(-0.049798932, -0.99870366, 0.01054614, 0.99868846, -0.04966697, 0.012425187, -0.0118852835, 0.011151066, 0.999867, 22.046816, 24.162865, -34.132156)
+mesh = SubResource("BoxMesh_fqksc")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Toys/climbing wall/base" unique_id=2124374312]
+transform = Transform3D(-0.049798932, -0.99870366, 0.01054614, 0.99868846, -0.04966697, 0.012425187, -0.0118852835, 0.011151066, 0.999867, 22.046816, 24.162865, -34.132156)
+shape = SubResource("BoxShape3D_sx0x7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Toys/climbing wall/base" unique_id=1444960645]
+transform = Transform3D(0.019434063, -0.99950004, -0.024938732, -0.039380886, -0.02568933, 0.9988939, -0.9990353, -0.018430462, -0.039860442, 21.874302, 27.960974, -38.906605)
+mesh = SubResource("BoxMesh_fqksc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toys/climbing wall/base" unique_id=971014099]
+transform = Transform3D(0.019434063, -0.99950004, -0.024938732, -0.039380886, -0.02568933, 0.9988939, -0.9990353, -0.018430462, -0.039860442, 21.874302, 27.960974, -38.906605)
+shape = SubResource("BoxShape3D_6hj4y")
+
+[node name="rock" parent="Toys/climbing wall" unique_id=1954767027 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.571217, 4.898862, -32.481094)
+
+[node name="rock2" parent="Toys/climbing wall" unique_id=2030187436 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.849957, 6.10565, -32.481094)
+
+[node name="rock3" parent="Toys/climbing wall" unique_id=51697636 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.849957, 9.49952, -32.481094)
+
+[node name="rock4" parent="Toys/climbing wall" unique_id=505195056 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.143135, 9.49952, -32.481094)
+
+[node name="rock5" parent="Toys/climbing wall" unique_id=172484399 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.143135, 13.2552805, -32.481094)
+
+[node name="rock6" parent="Toys/climbing wall" unique_id=2004856165 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.143135, 15.719718, -32.481094)
+
+[node name="rock7" parent="Toys/climbing wall" unique_id=977455586 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.143135, 15.719718, -32.481094)
+
+[node name="rock8" parent="Toys/climbing wall" unique_id=1049293352 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.894859, 15.719718, -32.481094)
+
+[node name="rock9" parent="Toys/climbing wall" unique_id=1634819890 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.894859, 18.03128, -32.481094)
+
+[node name="rock10" parent="Toys/climbing wall" unique_id=1840097076 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.518791, 18.03128, -32.481094)
+
+[node name="rock11" parent="Toys/climbing wall" unique_id=316093736 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.518791, 21.27996, -32.481094)
+
+[node name="rock12" parent="Toys/climbing wall" unique_id=1238801773 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.017776, 21.27996, -32.481094)
+
+[node name="rock13" parent="Toys/climbing wall" unique_id=649314938 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.017776, 25.090916, -32.481094)
+
+[node name="rock14" parent="Toys/climbing wall" unique_id=427662841 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.579636, 25.090916, -32.481094)
+
+[node name="rock15" parent="Toys/climbing wall" unique_id=1449614639 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.579636, 27.340004, -32.481094)
+
+[node name="rock16" parent="Toys/climbing wall" unique_id=1537892301 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.266457, 27.340004, -32.481094)
+
+[node name="rock17" parent="Toys/climbing wall" unique_id=1006417376 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.266457, 28.77692, -32.481094)
+
+[node name="rock18" parent="Toys/climbing wall" unique_id=585283989 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.767479, 28.77692, -32.481094)
+
+[node name="rock19" parent="Toys/climbing wall" unique_id=35459011 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.33097, 28.839397, -32.481094)
+
+[node name="rock20" parent="Toys/climbing wall" unique_id=1074606520 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.33097, 23.59153, -32.481094)
+
+[node name="rock21" parent="Toys/climbing wall" unique_id=59946353 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.33097, 7.9104004, -32.481094)
+
+[node name="rock22" parent="Toys/climbing wall" unique_id=357808416 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.833611, 14.407763, -32.481094)
+
+[node name="rock23" parent="Toys/climbing wall" unique_id=855506710 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.833611, 18.593563, -32.481094)
+
+[node name="rock24" parent="Toys/climbing wall" unique_id=544557648 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.208054, 18.593563, -32.481094)
+
+[node name="rock25" parent="Toys/climbing wall" unique_id=1154511832 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.208054, 15.469833, -32.481094)
+
+[node name="rock26" parent="Toys/climbing wall" unique_id=1746125730 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.896492, 15.719732, -32.481094)
+
+[node name="rock27" parent="Toys/climbing wall" unique_id=635422845 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.896492, 21.215342, -32.481094)
+
+[node name="rock28" parent="Toys/climbing wall" unique_id=1044117415 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.918183, 21.215342, -32.481094)
+
+[node name="rock29" parent="Toys/climbing wall" unique_id=2114183316 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.768725, 21.215342, -32.481094)
+
+[node name="rock30" parent="Toys/climbing wall" unique_id=419311810 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.921371, 21.215342, -32.481094)
+
+[node name="rock31" parent="Toys/climbing wall" unique_id=907897617 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.921371, 23.762964, -32.481094)
+
+[node name="rock32" parent="Toys/climbing wall" unique_id=1394569715 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.921371, 26.28969, -32.481094)
+
+[node name="rock33" parent="Toys/climbing wall" unique_id=1715979373 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.473707, 22.601885, -32.481094)
+
+[node name="rock34" parent="Toys/climbing wall" unique_id=635715289 instance=ExtResource("7_gmjmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.473707, 22.601885, -32.481094)
+
+[node name="ball pit!!!" type="Node" parent="Toys" unique_id=128302381]
+
+[node name="base" type="StaticBody3D" parent="Toys/ball pit!!!" unique_id=390260784]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Toys/ball pit!!!/base" unique_id=1853020460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.837872, 2.6642704, -62.174667)
+mesh = SubResource("BoxMesh_aywlg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toys/ball pit!!!/base" unique_id=1698285073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.837872, 2.6642704, -62.174667)
+shape = SubResource("BoxShape3D_l1dsl")
 
 [node name="structures" type="Node" parent="." unique_id=510167287]
 
