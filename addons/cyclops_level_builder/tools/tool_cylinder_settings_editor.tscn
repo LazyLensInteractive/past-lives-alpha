@@ -1,32 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx804lkvek177"]
+[gd_scene format=3 uid="uid://dx804lkvek177"]
 
 [ext_resource type="Script" uid="uid://dcoks486dbj4n" path="res://addons/cyclops_level_builder/tools/tool_cylinder_settings_editor.gd" id="1_oyugv"]
 [ext_resource type="PackedScene" uid="uid://diibmlqy1mpqb" path="res://addons/cyclops_level_builder/gui/controls/numeric_line_edit.tscn" id="2_wm7rv"]
 
-[node name="ToolCylinderSettings" type="PanelContainer"]
+[node name="ToolCylinderSettings" type="PanelContainer" unique_id=1145453502]
 offset_right = 413.0
 offset_bottom = 232.0
 script = ExtResource("1_oyugv")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1158677116]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=470388706]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=1628225099]
 layout_mode = 2
 columns = 2
 
-[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1282028400]
 layout_mode = 2
 text = "Collision Type"
 
-[node name="collision_type" type="OptionButton" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="collision_type" type="OptionButton" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1751973404]
 unique_name_in_owner = true
 layout_mode = 2
-item_count = 4
 selected = 0
+item_count = 4
 popup/item_0/text = "NONE"
 popup/item_0/id = 0
 popup/item_1/text = "STATIC"
@@ -36,11 +36,11 @@ popup/item_2/id = 2
 popup/item_3/text = "RIGID"
 popup/item_3/id = 3
 
-[node name="Label5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=481060227]
 layout_mode = 2
 text = "Collision Layers"
 
-[node name="collision_layers" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="collision_layers" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=70690698]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -48,22 +48,22 @@ rounded = true
 allow_greater = true
 allow_lesser = true
 
-[node name="Label6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1184543732]
 layout_mode = 2
 text = "Collision Mask"
 
-[node name="collision_mask" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="collision_mask" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=835935357]
 unique_name_in_owner = true
 layout_mode = 2
 rounded = true
 allow_greater = true
 allow_lesser = true
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=302214156]
 layout_mode = 2
 text = "Segments"
 
-[node name="spin_segments" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="spin_segments" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=947848930]
 unique_name_in_owner = true
 layout_mode = 2
 min_value = 3.0
@@ -72,25 +72,25 @@ value = 3.0
 rounded = true
 allow_greater = true
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1534318447]
 layout_mode = 2
 text = "Tube"
 
-[node name="check_tube" type="CheckBox" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="check_tube" type="CheckBox" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=956604437]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "On"
 
-[node name="Label7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=480088142]
 layout_mode = 2
 text = "Alignment"
 
-[node name="alignment_type" type="OptionButton" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="alignment_type" type="OptionButton" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1667553031]
 unique_name_in_owner = true
 layout_mode = 2
-item_count = 4
 selected = 0
+item_count = 4
 popup/item_0/text = "Align to surface"
 popup/item_0/id = 0
 popup/item_1/text = "XY Plane"
@@ -100,47 +100,47 @@ popup/item_2/id = 2
 popup/item_3/text = "YZ Plane"
 popup/item_3/id = 3
 
-[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1587453464]
 layout_mode = 2
 text = "Match selected block"
 
-[node name="check_match_selected_block" type="CheckBox" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="check_match_selected_block" type="CheckBox" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=881058705]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "When drawing in empty space, copy elevation and height properties from currently selected block."
 disabled = true
 text = "On"
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1920613522]
 layout_mode = 2
 text = "Orthogonal Viewport:"
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=169333109]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1018252546]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1984095190]
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1735033104]
 layout_mode = 2
 text = "Default Block Elevation"
 
-[node name="default_block_elevation" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_wm7rv")]
+[node name="default_block_elevation" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=80062642 instance=ExtResource("2_wm7rv")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1302217074]
 layout_mode = 2
 text = "Default Block Height"
 
-[node name="default_block_height" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_wm7rv")]
+[node name="default_block_height" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1631539226 instance=ExtResource("2_wm7rv")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b510d4yme5xtx"]
+[gd_scene format=3 uid="uid://b510d4yme5xtx"]
 
 [ext_resource type="Script" uid="uid://sx81fxaloitl" path="res://addons/cyclops_level_builder/gui/docks/material_palette/material_viewer/create_material_dialog.gd" id="1_ysdvw"]
 
@@ -16,158 +16,159 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_7cu3j")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_rde8s"]
 
-[node name="CreateMaterialDialog" type="Window"]
+[node name="CreateMaterialDialog" type="Window" unique_id=243252070]
+oversampling_override = 1.0
 title = "Create Material"
 position = Vector2i(0, 36)
 size = Vector2i(600, 400)
 script = ExtResource("1_ysdvw")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1996012717]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=628523962]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=2061354372]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=479440680]
 layout_mode = 2
 text = "Material Name:"
 
-[node name="line_material_name" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+[node name="line_material_name" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1953982842]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=1180939927]
 layout_mode = 2
 theme = SubResource("Theme_u2063")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2" unique_id=11436298]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer" unique_id=2092098734]
 layout_mode = 2
 text = "Material Type"
 
-[node name="radio_stdMat" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="radio_stdMat" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer" unique_id=1876313573]
 unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 button_group = SubResource("ButtonGroup_hlttb")
 text = "StandardMaterial3D"
 
-[node name="radio_shaderMat" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="radio_shaderMat" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer" unique_id=946412720]
 unique_name_in_owner = true
 layout_mode = 2
 button_group = SubResource("ButtonGroup_hlttb")
 text = "ShaderMaterial"
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer" unique_id=2147312602]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer" unique_id=1762221354]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=61135722]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=648787599]
 layout_mode = 2
 text = "Shader:"
 
-[node name="line_shader_path" type="LineEdit" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="line_shader_path" type="LineEdit" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=843988178]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="bn_browse_shader" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="bn_browse_shader" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1355572603]
 layout_mode = 2
 tooltip_text = "Pick shader to use for material"
 text = "..."
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=982688021]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=851133596]
 layout_mode = 2
 text = "Texture Parameter:"
 
-[node name="target_slot" type="OptionButton" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="target_slot" type="OptionButton" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=842268310]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1007530915]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=943913270]
 layout_mode = 2
 text = "UV Parameter:"
 
-[node name="uv_slot" type="OptionButton" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="uv_slot" type="OptionButton" parent="PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1026803051]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=1607908236]
 layout_mode = 2
 theme = SubResource("Theme_u2063")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer" unique_id=2034398777]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=647844773]
 layout_mode = 2
 text = "UVs"
 
-[node name="radio_uv_1x1" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2"]
+[node name="radio_uv_1x1" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=591874282]
 unique_name_in_owner = true
 layout_mode = 2
 button_group = SubResource("ButtonGroup_rde8s")
 text = "1 x 1"
 
-[node name="radio_uv_scale_to_pix" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2"]
+[node name="radio_uv_scale_to_pix" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=1816305665]
 unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 button_group = SubResource("ButtonGroup_rde8s")
 text = "Scale to pixel size"
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=588887189]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer" unique_id=1838690472]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer/HBoxContainer2" unique_id=50344320]
 layout_mode = 2
 text = "Pixels per game unit"
 
-[node name="line_pix_per_game_unit" type="LineEdit" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer/HBoxContainer2"]
+[node name="line_pix_per_game_unit" type="LineEdit" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer2/MarginContainer/HBoxContainer2" unique_id=252198729]
 unique_name_in_owner = true
 layout_mode = 2
 text = "32"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=758101956]
 layout_mode = 2
 alignment = 1
 
-[node name="bn_okay" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="bn_okay" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1757251984]
 layout_mode = 2
 text = "Okay"
 
-[node name="bn_cancel" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="bn_cancel" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1627906363]
 layout_mode = 2
 text = "Cancel
 "
 
-[node name="FileDialog" type="FileDialog" parent="."]
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1876527085]
 unique_name_in_owner = true
 title = "Open a File"
 size = Vector2i(600, 400)

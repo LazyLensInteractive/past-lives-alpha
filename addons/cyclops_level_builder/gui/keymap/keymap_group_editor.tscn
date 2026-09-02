@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://rpx15l2fbu2o"]
+[gd_scene format=3 uid="uid://rpx15l2fbu2o"]
 
 [ext_resource type="Script" uid="uid://c8pf5vu8okw3a" path="res://addons/cyclops_level_builder/gui/keymap/keymap_group_editor.gd" id="1_51m4b"]
 [ext_resource type="Script" uid="uid://bv3rt2x7fy6al" path="res://addons/cyclops_level_builder/gui/docks/cyclops_console/keymap_editor/keymap_tree_control.gd" id="2_wy8dh"]
 
-[node name="KeymapGroupEditor" type="PanelContainer"]
+[node name="KeymapGroupEditor" type="PanelContainer" unique_id=1813349410]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,11 +11,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_51m4b")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1855440738]
 layout_mode = 2
+split_offsets = PackedInt32Array(600)
 split_offset = 600
 
-[node name="Tree" type="Tree" parent="HSplitContainer"]
+[node name="Tree" type="Tree" parent="HSplitContainer" unique_id=419492237]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -24,16 +25,16 @@ column_titles_visible = true
 drop_mode_flags = 3
 script = ExtResource("2_wy8dh")
 
-[node name="extra_properties" type="PanelContainer" parent="HSplitContainer"]
+[node name="extra_properties" type="PanelContainer" parent="HSplitContainer" unique_id=1083220986]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="param_grid" type="GridContainer" parent="HSplitContainer/extra_properties"]
+[node name="param_grid" type="GridContainer" parent="HSplitContainer/extra_properties" unique_id=1837279606]
 unique_name_in_owner = true
 layout_mode = 2
 columns = 2
 
-[node name="popup_actions" type="PopupMenu" parent="."]
+[node name="popup_actions" type="PopupMenu" parent="." unique_id=404038977]
 unique_name_in_owner = true
 size = Vector2i(131, 100)
 item_count = 3
@@ -44,7 +45,7 @@ item_1/id = 1
 item_2/text = "Remove Item"
 item_2/id = 2
 
-[node name="PopupMenu" type="PopupMenu" parent="."]
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=774400881]
 unique_name_in_owner = true
 item_count = 2
 item_0/text = "alpha"

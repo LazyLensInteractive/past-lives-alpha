@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/snap_uvs_independent.svg-22ec9f308fe3b7a7f942
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

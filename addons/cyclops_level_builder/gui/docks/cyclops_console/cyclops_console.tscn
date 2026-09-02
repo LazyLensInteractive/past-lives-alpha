@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbo80g1hbom2"]
+[gd_scene format=3 uid="uid://cbo80g1hbom2"]
 
 [ext_resource type="Script" uid="uid://cgdu3bkbagstk" path="res://addons/cyclops_level_builder/gui/docks/cyclops_console/cyclops_console.gd" id="1_f4kro"]
 [ext_resource type="PackedScene" uid="uid://cphtpklx81l3w" path="res://addons/cyclops_level_builder/gui/controls/vector3_edit.tscn" id="2_qpx41"]
 [ext_resource type="PackedScene" uid="uid://6ox14xmdrbgw" path="res://addons/cyclops_level_builder/gui/docks/cyclops_console/keymap_editor/keymap_editor.tscn" id="3_5uopq"]
 
-[node name="PanelContainer" type="PanelContainer"]
+[node name="PanelContainer" type="PanelContainer" unique_id=38666393]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,62 +14,65 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_f4kro")
 
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1929085991]
 layout_mode = 2
+current_tab = 0
 
-[node name="Main" type="PanelContainer" parent="TabContainer"]
+[node name="Main" type="PanelContainer" parent="TabContainer" unique_id=113408873]
 layout_mode = 2
+metadata/_tab_index = 0
 
-[node name="enable_cyclops" type="CheckBox" parent="TabContainer/Main"]
+[node name="enable_cyclops" type="CheckBox" parent="TabContainer/Main" unique_id=972493376]
 visible = false
 layout_mode = 2
 text = "Enable Cyclops"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main" unique_id=1448274609]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Main/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Main/VBoxContainer" unique_id=1558716881]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer" unique_id=147999667]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer" unique_id=1292091950]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=1778879373]
 layout_mode = 2
 text = "Create Block"
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=1058766922]
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1749397409]
 layout_mode = 2
 text = "Position"
 
-[node name="block_position" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qpx41")]
+[node name="block_position" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1243136385 instance=ExtResource("2_qpx41")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label2" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1389796548]
 layout_mode = 2
 text = "Size"
 
-[node name="block_size" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qpx41")]
+[node name="block_size" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=950606556 instance=ExtResource("2_qpx41")]
 unique_name_in_owner = true
 layout_mode = 2
 value = Vector3(1, 1, 1)
 
-[node name="bn_create_block" type="Button" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="bn_create_block" type="Button" parent="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=643344882]
 layout_mode = 2
 text = "Create Block"
 
-[node name="Keymap" parent="TabContainer" instance=ExtResource("3_5uopq")]
+[node name="Keymap" parent="TabContainer" unique_id=1556790148 instance=ExtResource("3_5uopq")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [connection signal="toggled" from="TabContainer/Main/enable_cyclops" to="." method="_on_enable_cyclops_toggled"]
 [connection signal="pressed" from="TabContainer/Main/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/bn_create_block" to="." method="_on_bn_create_block_pressed"]

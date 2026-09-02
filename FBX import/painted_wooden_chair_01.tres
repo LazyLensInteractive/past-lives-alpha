@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckeqpk1jox2is"]
+
+[resource]
+resource_name = "painted_wooden_chair_01"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0

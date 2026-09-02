@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://o67oxkh75aas"]
+[gd_scene format=3 uid="uid://o67oxkh75aas"]
 
 [ext_resource type="Script" uid="uid://cmfehrinsh1y2" path="res://addons/cyclops_level_builder/gui/menu/tool_button_ref.gd" id="1_gyfm5"]
 
-[node name="ToolButton" type="Button"]
+[node name="ToolButton" type="Button" unique_id=167713099]
 offset_right = 58.0
 offset_bottom = 36.0
 script = ExtResource("1_gyfm5")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=409181260]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 metadata/_edit_lock_ = true
 
-[node name="highlight" type="ColorRect" parent="MarginContainer"]
+[node name="highlight" type="ColorRect" parent="MarginContainer" unique_id=1509053194]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2

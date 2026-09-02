@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bsv2hwr0f0aa6"]
+
+[resource]
+resource_name = "coffee_table_round_01"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0

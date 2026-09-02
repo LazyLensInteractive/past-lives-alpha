@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/audio.svg-20d7f0b624a1b2ef54f1b4d12970c8d0.ct
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

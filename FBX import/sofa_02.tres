@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2x5lqqtiouig"]
+
+[resource]
+resource_name = "sofa_02"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0

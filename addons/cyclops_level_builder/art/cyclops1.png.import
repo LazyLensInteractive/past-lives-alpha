@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/cyclops1.png-6f459321d21304ca30333893d06ffb09
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

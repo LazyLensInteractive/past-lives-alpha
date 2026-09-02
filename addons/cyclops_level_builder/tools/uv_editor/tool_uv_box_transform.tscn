@@ -1,62 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmmxxxd4ahdvj"]
+[gd_scene format=3 uid="uid://dmmxxxd4ahdvj"]
 
 [ext_resource type="Script" uid="uid://blspcyewd8ue6" path="res://addons/cyclops_level_builder/tools/uv_editor/tool_uv_box_transform.gd" id="1_net8d"]
 [ext_resource type="PackedScene" uid="uid://cekp071dby6d2" path="res://addons/cyclops_level_builder/tools/uv_editor/tool_uv_box_handle.tscn" id="2_wuylr"]
 
-[node name="ToolUvBoxTransform" type="Node"]
+[node name="ToolUvBoxTransform" type="Node" unique_id=1603935377]
 script = ExtResource("1_net8d")
 
-[node name="handle_scale_00" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_00" parent="." unique_id=1415085366 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_01" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_01" parent="." unique_id=713667626 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_02" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_02" parent="." unique_id=159233106 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_10" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_10" parent="." unique_id=1817503034 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_12" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_12" parent="." unique_id=1840215499 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_20" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_20" parent="." unique_id=136249815 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_21" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_21" parent="." unique_id=1937315101 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_scale_22" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_scale_22" parent="." unique_id=1693782215 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_00" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_00" parent="." unique_id=944025850 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_01" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_01" parent="." unique_id=630111996 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_02" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_02" parent="." unique_id=593258332 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_10" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_10" parent="." unique_id=1800988199 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_12" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_12" parent="." unique_id=1052866230 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_20" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_20" parent="." unique_id=1813454370 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_21" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_21" parent="." unique_id=481607121 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_rot_22" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_rot_22" parent="." unique_id=1270940091 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 
-[node name="handle_transform" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_transform" parent="." unique_id=1259006624 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true
 style = 1
 
-[node name="handle_pivot" parent="." instance=ExtResource("2_wuylr")]
+[node name="handle_pivot" parent="." unique_id=1734249516 instance=ExtResource("2_wuylr")]
 unique_name_in_owner = true

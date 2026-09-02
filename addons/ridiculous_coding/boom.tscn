@@ -57,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_27xno")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 24.0
 }]
@@ -91,45 +91,43 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ocb2c"]
 _data = {
-"default": SubResource("Animation_pxf6h")
+&"default": SubResource("Animation_pxf6h")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=944694964]
 texture_filter = 1
 script = ExtResource("4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=551020826]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ld5tu")
 frame = 6
 frame_progress = 1.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1951039136]
 stream = ExtResource("2")
 volume_db = -26.0
 autoplay = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1265907146]
 one_shot = true
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0.852828, 1.64201, 1.90577, 1)
+[node name="Label" type="Label" parent="." unique_id=1540705218]
+modulate = Color(1.8397474, 1.0441043, 0.12879564, 1)
 texture_filter = 1
 offset_left = -35.0
-offset_top = -70.0
+offset_top = -36.75
 offset_right = 35.0
-offset_bottom = -47.0
-scale = Vector2(2, 2)
+offset_bottom = -13.75
+scale = Vector2(1.125, 1.125)
 pivot_offset = Vector2(35, 8)
 theme_override_fonts/font = ExtResource("5")
 theme_override_font_sizes/font_size = 16
 uppercase = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ocb2c")
-}
-autoplay = "default"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=700605122]
+libraries/ = SubResource("AnimationLibrary_ocb2c")
+autoplay = &"default"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

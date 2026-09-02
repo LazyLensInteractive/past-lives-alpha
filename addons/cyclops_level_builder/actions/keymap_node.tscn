@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://blfv8tf6tiv0b"]
+[gd_scene format=3 uid="uid://blfv8tf6tiv0b"]
 
 [ext_resource type="Script" uid="uid://c5akkeuico7qu" path="res://addons/cyclops_level_builder/actions/keymap_node.gd" id="1_djsgr"]
 
-[node name="KeymapNode" type="Node"]
+[node name="KeymapNode" type="Node" unique_id=2006808958]
 script = ExtResource("1_djsgr")

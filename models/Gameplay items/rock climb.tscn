@@ -10,7 +10,7 @@ size = Vector3(0.2, 0.2, 0.2)
 
 [node name="rock" unique_id=1954767027 instance=ExtResource("1_1b440")]
 
-[node name="CollisionShape3D" parent="." index="0"]
+[node name="CollisionShape3D" parent="." index="0" unique_id=636262388]
 shape = SubResource("BoxShape3D_oe7kc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=2028160585]

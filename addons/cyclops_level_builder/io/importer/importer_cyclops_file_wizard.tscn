@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl2ohfqvxwjke"]
+[gd_scene format=3 uid="uid://bl2ohfqvxwjke"]
 
 [ext_resource type="Script" uid="uid://djg5kdryb22yo" path="res://addons/cyclops_level_builder/io/importer/importer_cyclops_file_wizard.gd" id="1_sehb5"]
 
@@ -8,11 +8,12 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 
-[node name="ImporterCyclopsFileWizard" type="Window"]
+[node name="ImporterCyclopsFileWizard" type="Window" unique_id=485124130]
+oversampling_override = 1.0
 size = Vector2i(600, 100)
 script = ExtResource("1_sehb5")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=874173295]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -20,36 +21,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_jvbwn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=101609367]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1646175737]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1571519964]
 layout_mode = 2
 text = "Path
 "
 
-[node name="lineEdit_path" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="lineEdit_path" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1431933599]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="bn_browse" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="bn_browse" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1102957438]
 layout_mode = 2
 tooltip_text = "Browse"
 text = "..."
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1148937338]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="bn_okay" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="bn_okay" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1601564922]
 layout_mode = 2
 text = "Okay"
 
-[node name="bn_cancel" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="bn_cancel" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1279169982]
 layout_mode = 2
 text = "Cancel"
 

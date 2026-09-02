@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cassh222pussv"]
+[gd_scene format=3 uid="uid://cassh222pussv"]
 
 [ext_resource type="Script" uid="uid://bmb7dwtk8xpuq" path="res://addons/cyclops_level_builder/gui/controls/rotation_container.gd" id="1_sjaed"]
 
-[node name="RotationContainer" type="Container"]
+[node name="RotationContainer" type="Container" unique_id=993010458]
 script = ExtResource("1_sjaed")

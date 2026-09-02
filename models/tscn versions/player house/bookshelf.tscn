@@ -11,7 +11,7 @@ data = PackedVector3Array(-0.0052, 0.0016999999, 0.0002, -0.0052, -0.0016999999,
 
 [node name="bookshelf" unique_id=1937150389 instance=ExtResource("1_dnbvj")]
 
-[node name="wooden_display_shelves_01" parent="." index="0" unique_id=990827954]
+[node name="wooden_display_shelves_01" parent="." index="0" unique_id=196751855]
 material_override = SubResource("StandardMaterial3D_c62nc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="4" unique_id=342270733]

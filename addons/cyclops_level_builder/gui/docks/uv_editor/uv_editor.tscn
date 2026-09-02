@@ -13,6 +13,6 @@ unique_name_in_owner = true
 
 [node name="pivot_cursor" type="Node2D" parent="." unique_id=1511719977]
 unique_name_in_owner = true
-position = Vector2(1334, 902)
+position = Vector2(971, 538.5)
 script = ExtResource("2_eivyd")
 radius = 20.0

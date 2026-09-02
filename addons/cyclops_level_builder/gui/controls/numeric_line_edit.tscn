@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://diibmlqy1mpqb"]
+[gd_scene format=3 uid="uid://diibmlqy1mpqb"]
 
 [ext_resource type="Script" uid="uid://pcf2ij8eycw5" path="res://addons/cyclops_level_builder/gui/controls/numeric_line_edit.gd" id="1_u8bpo"]
 
@@ -14,16 +14,16 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 
-[node name="numeric_line_edit" type="PanelContainer"]
+[node name="numeric_line_edit" type="PanelContainer" unique_id=1917258390]
 offset_right = 476.0
 offset_bottom = 23.0
 script = ExtResource("1_u8bpo")
 snap_size = 0.125
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1786597813]
 layout_mode = 2
 
-[node name="line_input" type="LineEdit" parent="HBoxContainer"]
+[node name="line_input" type="LineEdit" parent="HBoxContainer" unique_id=1816552774]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -32,7 +32,7 @@ text = "0"
 alignment = 2
 select_all_on_focus = true
 
-[node name="line_display" type="Label" parent="HBoxContainer"]
+[node name="line_display" type="Label" parent="HBoxContainer" unique_id=2008228381]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

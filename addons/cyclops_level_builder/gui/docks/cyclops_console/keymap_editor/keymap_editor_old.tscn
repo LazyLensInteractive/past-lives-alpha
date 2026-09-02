@@ -1,31 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://871vocoppxgu"]
+[gd_scene format=3 uid="uid://871vocoppxgu"]
 
 [ext_resource type="Script" uid="uid://b50e2622c3n6d" path="res://addons/cyclops_level_builder/gui/docks/cyclops_console/keymap_editor/keymap_editor_old.gd" id="1_dmf2d"]
 [ext_resource type="PackedScene" uid="uid://cbhhhrm156lot" path="res://addons/cyclops_level_builder/gui/docks/cyclops_console/keymap_editor/keymap_invoker_editor.tscn" id="2_ke8pd"]
 
-[node name="Keymap" type="PanelContainer"]
+[node name="Keymap" type="PanelContainer" unique_id=1699110861]
 offset_right = 419.0
 offset_bottom = 171.0
 script = ExtResource("1_dmf2d")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1791991608]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1868974111]
 layout_mode = 2
 
-[node name="keymap_list" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+[node name="keymap_list" type="VBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1431117092]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="keymap_invoker_editor" parent="ScrollContainer/VBoxContainer/keymap_list" instance=ExtResource("2_ke8pd")]
+[node name="keymap_invoker_editor" parent="ScrollContainer/VBoxContainer/keymap_list" unique_id=211507880 instance=ExtResource("2_ke8pd")]
 layout_mode = 2
 
-[node name="keymap_invoker_editor2" parent="ScrollContainer/VBoxContainer/keymap_list" instance=ExtResource("2_ke8pd")]
+[node name="keymap_invoker_editor2" parent="ScrollContainer/VBoxContainer/keymap_list" unique_id=1289089698 instance=ExtResource("2_ke8pd")]
 layout_mode = 2
 
-[node name="bn_add_keymap" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="bn_add_keymap" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1681718404]
 layout_mode = 2
 text = "Add Keymap"
 

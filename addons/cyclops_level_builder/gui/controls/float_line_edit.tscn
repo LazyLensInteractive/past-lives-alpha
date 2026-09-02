@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcbxelosum70b"]
+[gd_scene format=3 uid="uid://dcbxelosum70b"]
 
 [ext_resource type="Script" uid="uid://bvug3uvh6rsqk" path="res://addons/cyclops_level_builder/gui/controls/float_line_edit.gd" id="1_ph51l"]
 
-[node name="FloatLineEdit" type="LineEdit"]
+[node name="FloatLineEdit" type="LineEdit" unique_id=1893633077]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
