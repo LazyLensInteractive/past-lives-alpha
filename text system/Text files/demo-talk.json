@@ -1,0 +1,27 @@
+{
+  "demo-alice-talk": {
+	"speaker": "Alice",
+	"lines": [
+	  "For just this moment... Just one fucking moment, let us pretend.....",
+	  "Pretend there is no weight on our shoulders.",
+      "I'm tired.... I wish we could go home"
+	],
+	"speed_min": 0.4,
+	"speed_max": 0.8,
+	"color": "#ffffff",
+	"shake": false
+  },
+  "demo-player-talk": {
+	"speaker": "player",
+	"lines": [
+	  "Home?.... #memory_remeber#",
+	  "That means very diffrent things for both of us.",
+	  "I...",
+      "I think I like it here"
+	],
+	"speed_min": 0.4,
+	"speed_max": 0.8,
+	"color": "#ffffff",
+	"shake": false
+  }
+}
