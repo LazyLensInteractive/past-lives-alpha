@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://daxf1qamv3r18"]
+
+[ext_resource type="Script" uid="uid://bj5k7mq13mt5d" path="res://text_data_bus.gd" id="1_rykbd"]
+
+[node name="Text data bus" type="Node" unique_id=1299005952]
+script = ExtResource("1_rykbd")

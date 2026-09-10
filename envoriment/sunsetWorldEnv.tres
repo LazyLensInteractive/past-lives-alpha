@@ -1,0 +1,14 @@
+[gd_resource type="Environment" format=3 uid="uid://b803hg1ojujs3"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jyhqs"]
+rayleigh_color = Color(3.2247603e-06, 0.44573295, 0.5894553, 1)
+
+[sub_resource type="Sky" id="Sky_43n2k"]
+sky_material = SubResource("PhysicalSkyMaterial_jyhqs")
+radiance_size = 4
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_43n2k")
+tonemap_mode = 1
+tonemap_exposure = 0.44

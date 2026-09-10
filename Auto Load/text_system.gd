@@ -13,7 +13,7 @@ var regex = RegEx.new()
 signal done_talking #currently used to tell when a line is finished
 signal text_data_commands(command: String)
 
-@export_file("*.json") var current_loaded_text: String = ""
+#@export_file("*.json") var current_loaded_text: String = "" (no clue why this is here past me plz explain one day)
 func text_load(Path: String):
 	Path = FileAccess.get_file_as_string(Path)
 	if Path == null:
@@ -50,7 +50,7 @@ func text_display():
 	#RegEx
 	var matches = regex.search_all(sentence)
 	for i in matches:
-		var RegData = i.get_string(0)
+		var RegData = i.get_string(1)
 		text_data_commands.emit(RegData)
 	sentence = regex.sub(sentence, "", true)
 	# bbcode stuffs

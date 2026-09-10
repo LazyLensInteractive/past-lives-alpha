@@ -2,12 +2,13 @@
   "demo-alice-talk": {
 	"speaker": "Alice",
 	"lines": [
-	  "For just this moment... Just one fucking moment, let us pretend.....",
-	  "Pretend there is no weight on our shoulders.",
-      "I'm tired.... I wish we could go home"
+	  "For just this moment... Just one fucking moment, let us pretend..... #test#",
+	  "Pretend there is no weight on our shoulders. #test2#",
+	  "I'm tired.... I wish we could go home",
+	  "can you see it in my eyes? Am I finnaly awake?"
 	],
-	"speed_min": 0.4,
-	"speed_max": 0.8,
+	"speed_min": 0.1,
+	"speed_max": 0.3,
 	"color": "#ffffff",
 	"shake": false
   },
@@ -17,7 +18,7 @@
 	  "Home?.... #memory_remeber#",
 	  "That means very diffrent things for both of us.",
 	  "I...",
-      "I think I like it here"
+      "I'm not where im suposed to be #demo_play#"
 	],
 	"speed_min": 0.4,
 	"speed_max": 0.8,

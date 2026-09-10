@@ -1,6 +1,7 @@
 extends Node3D
 class_name TextScript
 #put the tscn into a scene choose the diolouge kee and make a marker for the npc marker for the player should already exist and audio for variation between 'voices'
+@export var dialouge_json_path: String
 @export var dialogue_key: String 
 @export var auto_start: bool = true
 @export var npc_head_marker: Marker3D
@@ -13,6 +14,7 @@ var xr_camera: XRCamera3D
 
 
 func _ready() -> void:
+	TextSystem.text_load(dialouge_json_path)
 	TextSystem.text_data_commands.connect(text_data)
 	TextSystem.done_talking.connect(line_done)
 	xr_camera = get_viewport().get_camera_3d()

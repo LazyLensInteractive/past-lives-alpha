@@ -1,21 +1,9 @@
 [gd_scene format=3 uid="uid://nfg5srd6en7x"]
 
 [ext_resource type="Texture2D" uid="uid://bmp4cjmef1dyq" path="res://materials/sand/sand_03_diff_2k.jpg" id="1_43n2k"]
+[ext_resource type="Environment" uid="uid://b803hg1ojujs3" path="res://envoriment/sunsetWorldEnv.tres" id="1_337fd"]
 [ext_resource type="Texture2D" uid="uid://dhxy3w1v6v73i" path="res://materials/sand/sand_03_nor_gl_2k.jpg" id="2_tdq1v"]
 [ext_resource type="Shader" uid="uid://d4kbwcfsatqau" path="res://materials/water.gdshader" id="3_wmx66"]
-
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jyhqs"]
-rayleigh_color = Color(3.2247603e-06, 0.44573295, 0.5894553, 1)
-
-[sub_resource type="Sky" id="Sky_43n2k"]
-sky_material = SubResource("PhysicalSkyMaterial_jyhqs")
-radiance_size = 4
-
-[sub_resource type="Environment" id="Environment_tdq1v"]
-background_mode = 2
-sky = SubResource("Sky_43n2k")
-tonemap_mode = 1
-tonemap_exposure = 0.44
 
 [sub_resource type="Gradient" id="Gradient_wvdmf"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -85,6 +73,7 @@ normal_depth = 1.381
 roughness = 0.492
 detiling_rotation = 0.332
 detiling_shift = 0.259
+resource_name = "sand_03_diff_2k"
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_3t5gu"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wmx66")])
@@ -127,7 +116,7 @@ transform = Transform3D(-0.11139924, 0.09316892, 0.98939866, 0.0035416232, 0.995
 size = 0.46735808
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1807106599]
-environment = SubResource("Environment_tdq1v")
+environment = ExtResource("1_337fd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788101121]
 transform = Transform3D(-0.013956262, 0.041415147, -0.9990446, 0.0004077906, 0.99914205, 0.04141349, 0.99990255, 0.00017057639, -0.013961174, 0, 0, 0)
